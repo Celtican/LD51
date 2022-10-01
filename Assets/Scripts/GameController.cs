@@ -15,8 +15,4 @@ public class GameController : MonoBehaviour
     {
         
     }
-
-    public void BeginCase() {
-        
-    }
 }
