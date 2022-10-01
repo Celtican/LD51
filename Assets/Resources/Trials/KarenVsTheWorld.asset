@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
+  m_Name: KarenVsTheWorld
+  m_EditorClassIdentifier: 
+  caseName: Karen Vs The World
+  defendantPrefab: {fileID: 1025971890835566800, guid: 340fc3539c22b2546a7ef38eec40482f,
+    type: 3}
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
+    type: 3}
+  isGuilty: 1
+  dialogues:
+  - text: This thinks he's sly! He pickpocketed me while I was looking right at him!
+    actor: 1
+  - text: Nah, you got me all wrong. I ain't no thief.
+    actor: 0
+  - text: Uh huh, and where did my wallet go?
+    actor: 1
+  - text: Heh. You owed me rent. I'm just takin' what's mine.
+    actor: 0
+  - text: That is sooooo illegal! Get 'im, judge!
+    actor: 1
+  dialogueOnInnocent:
+  - text: See? You didn't need it anyways.
+    actor: 0
+  - text: I demand to speak to whoever is in charge of this place!
+    actor: 1
+  dialogueOnGuilty:
+  - text: Ha!
+    actor: 1
+  - text: ... Okay, I guess I deserve that one.
+    actor: 0

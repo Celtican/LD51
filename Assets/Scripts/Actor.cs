@@ -9,11 +9,6 @@ public class Actor : MonoBehaviour
 
 	private void Awake() {
 		bubble = GetComponentInChildren<DialogueBubble>();
-		print("Added bubble");
-	}
-
-	private void Start() {
-		print("Starting thing?");
 	}
 
 	public enum Type {

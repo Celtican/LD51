@@ -32,8 +32,8 @@ public class DialogueBubble : MonoBehaviour
 			} else {
 				textContainer.text = targetText;
 				if (!complete && timeSinceStart - (1 / charactersPerSecond * targetText.Length) > timeDelayAfterTextComplete) {
-					onDialogueComplete.Invoke();
 					complete = true;
+					onDialogueComplete.Invoke();
 				} else if (complete && timeSinceStart - (1 / charactersPerSecond * targetText.Length) > timeDelayAfterTextComplete*2) {
 					HideBubble();
 				}

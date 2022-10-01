@@ -2,27 +2,41 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class TrialController : MonoBehaviour
 {
+	public Gavel gavel;
 	public GameObject actorContainer;
 	public Vector3 defendantPosition;
 	public Vector3 plaintiffPosition;
 	public Trial debugTrial;
+	public UnityEvent onEndDialogue;
+	public UnityEvent onWin;
 
+	private List<Trial> allTrials;
 	private Trial trial;
 	private List<Dialogue> dialogues;
 	private Actor defendant;
 	private Actor plaintiff;
 
 	private void Start() {
+		allTrials = new List<Trial>(Resources.LoadAll<Trial>("Trials"));
 		if (debugTrial != null) StartTrial(debugTrial);
+		else StartRandomTrial();
 	}
 
+	public void StartRandomTrial() {
+		if (allTrials.Count == 0) onWin.Invoke();
+		else StartTrial(allTrials[Random.Range(0, allTrials.Count)]);
+	}
 	public void StartTrial(Trial trial) {
 		this.trial = trial;
+		allTrials.Remove(trial);
 		InstantiateActors();
 		StartDialogues(trial.dialogues);
+		gavel.enabled = true;
 	}
 	private void InstantiateActors() {
 		if (defendant != null) Destroy(defendant.gameObject);
@@ -48,6 +62,9 @@ public class TrialController : MonoBehaviour
 				case Actor.Type.Judge: defendant.bubble.Speak("Judge is not yet implemented"); break;
 				default: throw new Exception("Unknown actor");
 			}
+		} else {
+			onEndDialogue.Invoke();
+			if (!gavel.enabled) StartRandomTrial(); // the judge made their decision
 		}
 	}
 

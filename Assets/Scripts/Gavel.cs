@@ -17,10 +17,11 @@ public class Gavel : MonoBehaviour
 	private new Collider2D collider;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         collider = GetComponent<Collider2D>();
         startPosition = transform.position;
+        enabled = false;
     }
 
     // Update is called once per frame
@@ -49,8 +50,10 @@ public class Gavel : MonoBehaviour
 		isGrabbed = false;
 		transform.position = startPosition;
 		if (innocent.OverlapPoint(mousePos)) {
-            onHitInnocent.Invoke();
+			enabled = false;
+			onHitInnocent.Invoke();
 		} else if (guilty.OverlapPoint(mousePos)) {
+			enabled = false;
 			onHitGuilty.Invoke();
 		}
 	}

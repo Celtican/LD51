@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
+  m_Name: YortleyVsYertle
+  m_EditorClassIdentifier: 
+  caseName: YortleyVsYertle
+  defendantPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
+    type: 3}
+  plaintiffPrefab: {fileID: 1025971890835566800, guid: 340fc3539c22b2546a7ef38eec40482f,
+    type: 3}
+  isGuilty: 1
+  dialogues:
+  - text: I warned you, Yertle!
+    actor: 1
+  - text: I told you I would bring this to court if you did it again!
+    actor: 1
+  - text: And what did you do about that? You did it again!
+    actor: 1
+  - text: ... What did I do?
+    actor: 0
+  - text: YOU WALKED ACROSS MY LAWN!
+    actor: 1
+  - text: I'm a turtle! I walk slow, it was a shortcut...
+    actor: 0
+  - text: And now you'll pay the ultimate price! What do you say, judge?
+    actor: 1
+  dialogueOnInnocent:
+  - text: Huh? But he did walk across my lawn!
+    actor: 1
+  - text: That's not illegal though...
+    actor: 0
+  dialogueOnGuilty:
+  - text: I was just taking a shortcut!
+    actor: 0
+  - text: Haha! You deserve this!
+    actor: 1
