@@ -13,17 +13,13 @@ MonoBehaviour:
   m_Name: Charlotte le Cheetah v. Balsa County
   m_EditorClassIdentifier: 
   caseName: Charlotte le Cheetah v. Balsa County
-  defendantPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
-    type: 3}
+  defendantPrefab: {fileID: 0}
   plaintiffPrefab: {fileID: 1025971890835566800, guid: 340fc3539c22b2546a7ef38eec40482f,
     type: 3}
   isGuilty: 1
   dialogues:
   - text: I clocked this cheetah speeding down the highway at over 100 miles per
       hour.
-    actor: 1
-  - text: "She\u2019s refused to show up at court, and only sent this note to you,
-      Your Honor."
     actor: 1
   - text: "She\u2019s refused to show up at court, and only sent this note to you,
       Your Honor."

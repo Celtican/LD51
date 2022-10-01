@@ -45,10 +45,15 @@ public class TrialController : MonoBehaviour
 	private void InstantiateActors() {
 		if (defendant != null) Destroy(defendant.gameObject);
 		if (plaintiff != null) Destroy(plaintiff.gameObject);
-		defendant = Instantiate(trial.defendantPrefab, defendantPosition, Quaternion.identity, actorContainer.transform).GetComponent<Actor>();
-		plaintiff = Instantiate(trial.plaintiffPrefab, plaintiffPosition, Quaternion.identity, actorContainer.transform).GetComponent<Actor>();
-		defendant.bubble.onDialogueComplete.AddListener(NextDialogue);
-		plaintiff.bubble.onDialogueComplete.AddListener(NextDialogue);
+
+		if (trial.defendantPrefab != null) {
+			defendant = Instantiate(trial.defendantPrefab, defendantPosition, Quaternion.identity, actorContainer.transform).GetComponent<Actor>();
+			defendant.bubble.onDialogueComplete.AddListener(NextDialogue);
+		}
+		if (trial.plaintiffPrefab != null) {
+			plaintiff = Instantiate(trial.plaintiffPrefab, plaintiffPosition, Quaternion.identity, actorContainer.transform).GetComponent<Actor>();
+			plaintiff.bubble.onDialogueComplete.AddListener(NextDialogue);
+		}
 	}
 
 	private void StartDialogues(Dialogue[] dialogues) {
@@ -83,7 +88,7 @@ public class TrialController : MonoBehaviour
 	}
 
 	private void InterruptSpeaking() {
-		defendant.bubble.InterruptSpeaking();
-		plaintiff.bubble.InterruptSpeaking();
+		if (defendant != null) defendant.bubble.InterruptSpeaking();
+		if (plaintiff != null) plaintiff.bubble.InterruptSpeaking();
 	}
 }
