@@ -21,8 +21,7 @@ public class TrialController : MonoBehaviour
 	public void StartCase(Trial trial) {
 		this.trial = trial;
 		InstantiateActors();
-		dialogues = new List<Dialogue>(trial.dialogues);
-		NextDialogue();
+		StartDialogues(trial.dialogues);
 	}
 	private void InstantiateActors() {
 		if (defendant != null) Destroy(defendant.gameObject);
@@ -31,6 +30,11 @@ public class TrialController : MonoBehaviour
 		plaintiff = Instantiate(trial.plaintiffPrefab, plaintiffPosition, Quaternion.identity, actorContainer.transform).GetComponent<Actor>();
 		defendant.bubble.onDialogueComplete.AddListener(NextDialogue);
 		plaintiff.bubble.onDialogueComplete.AddListener(NextDialogue);
+	}
+
+	private void StartDialogues(Dialogue[] dialogues) {
+		this.dialogues = new List<Dialogue>(dialogues);
+		NextDialogue();
 	}
 
 	private void NextDialogue() {
@@ -44,5 +48,20 @@ public class TrialController : MonoBehaviour
 				default: throw new Exception("Unknown actor");
 			}
 		}
+	}
+
+	public void ChooseInnocent() {
+		InterruptSpeaking();
+		StartDialogues(trial.dialogueOnInnocent);
+	}
+
+	public void ChooseGuilty() {
+		InterruptSpeaking();
+		StartDialogues(trial.dialogueOnGuilty);
+	}
+
+	private void InterruptSpeaking() {
+		defendant.bubble.InterruptSpeaking();
+		plaintiff.bubble.InterruptSpeaking();
 	}
 }

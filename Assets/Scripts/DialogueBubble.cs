@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,7 +15,8 @@ public class DialogueBubble : MonoBehaviour
 	private SpriteRenderer textBack;
 	private string targetText = string.Empty;
 	private float startTime;
-	private bool isTyping = false;
+	private bool isSpeaking = false;
+	private bool complete = false;
 
 	private void Awake() {
 		textContainer = GetComponentInChildren<TMP_Text>();
@@ -22,16 +24,18 @@ public class DialogueBubble : MonoBehaviour
 	}
 
 	private void Update() {
-		if (isTyping) {
+		if (isSpeaking) {
 			float timeSinceStart = Time.time - startTime;
-			int numCharacters = Mathf.CeilToInt((Time.time - startTime) * charactersPerSecond);
+			int numCharacters = GetNumVisibleCharacters();
 			if (numCharacters < targetText.Length) {
 				textContainer.text = targetText.Remove(numCharacters);
 			} else {
 				textContainer.text = targetText;
-				if (timeSinceStart - (1 / charactersPerSecond * targetText.Length) > timeDelayAfterTextComplete) {
-					StopSpeaking();
+				if (!complete && timeSinceStart - (1 / charactersPerSecond * targetText.Length) > timeDelayAfterTextComplete) {
 					onDialogueComplete.Invoke();
+					complete = true;
+				} else if (complete && timeSinceStart - (1 / charactersPerSecond * targetText.Length) > timeDelayAfterTextComplete*2) {
+					HideBubble();
 				}
 			}
 		}
@@ -42,12 +46,23 @@ public class DialogueBubble : MonoBehaviour
 		textContainer.text = string.Empty;
 		startTime = Time.time;
 		targetText = text;
-		isTyping = true;
+		isSpeaking = true;
+		complete = false;
 	}
 
-	public void StopSpeaking() {
+	public void InterruptSpeaking() {
+		if (isSpeaking && GetNumVisibleCharacters() < targetText.Length) {
+			targetText = textContainer.text + "-";
+		}
+	}
+
+	public void HideBubble() {
 		textBack.enabled = false;
 		textContainer.text = string.Empty;
-		isTyping = false;
+		isSpeaking = false;
+	}
+
+	private int GetNumVisibleCharacters() {
+		return Mathf.CeilToInt((Time.time - startTime) * charactersPerSecond);
 	}
 }

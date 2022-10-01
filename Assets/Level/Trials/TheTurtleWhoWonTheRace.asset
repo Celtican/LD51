@@ -29,5 +29,15 @@ MonoBehaviour:
     actor: 0
   - text: Yeah, right! I'll believe it when I see you painting my car!
     actor: 1
-  dialogueOnInnocent: []
-  dialogueOnGuilty: []
+  dialogueOnInnocent:
+  - text: What?! He can't be innocent!
+    actor: 1
+  - text: Thank you, judge!
+    actor: 0
+  dialogueOnGuilty:
+  - text: ... Huh?!
+    actor: 0
+  - text: I'm just a turtle!
+    actor: 0
+  - text: Yeah, you're a turtle that scratched my new car!
+    actor: 1
