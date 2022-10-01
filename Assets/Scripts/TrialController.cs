@@ -12,6 +12,7 @@ public class TrialController : MonoBehaviour
 	public Vector3 defendantPosition;
 	public Vector3 plaintiffPosition;
 	public Trial debugTrial;
+	public UnityEvent onNewTrial;
 	public UnityEvent onEndDialogue;
 	public UnityEvent onWin;
 
@@ -37,6 +38,7 @@ public class TrialController : MonoBehaviour
 		InstantiateActors();
 		StartDialogues(trial.dialogues);
 		gavel.enabled = true;
+		onNewTrial.Invoke();
 	}
 	private void InstantiateActors() {
 		if (defendant != null) Destroy(defendant.gameObject);
