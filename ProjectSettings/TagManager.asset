@@ -38,14 +38,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 2365982999
     locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
   - name: Actors
     uniqueID: 2323262673
+    locked: 0
+  - name: Bubbles
+    uniqueID: 3993939509
     locked: 0
   - name: Desk
     uniqueID: 755494883
