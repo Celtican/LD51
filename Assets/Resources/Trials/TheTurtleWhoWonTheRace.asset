@@ -41,3 +41,11 @@ MonoBehaviour:
     actor: 0
   - text: Yeah, you're a turtle that scratched my new car!
     actor: 1
+  docket: 'This person was accused of stuff
+
+    - bullet one
+
+    - bullet two
+
+    -
+    etc'

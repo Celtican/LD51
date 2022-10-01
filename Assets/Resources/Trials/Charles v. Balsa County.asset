@@ -45,3 +45,11 @@ MonoBehaviour:
     actor: 0
   - text: if my suit gets 1 spot of dirt on it!
     actor: 0
+  docket: 'This person was accused of stuff
+
+    - bullet one
+
+    - bullet two
+
+    -
+    etc'

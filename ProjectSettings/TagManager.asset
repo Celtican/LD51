@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2365982999
+    locked: 0
+  - name: Actors
+    uniqueID: 2323262673
+    locked: 0
+  - name: Desk
+    uniqueID: 755494883
+    locked: 0
+  - name: Overlay
+    uniqueID: 2133456855
+    locked: 0

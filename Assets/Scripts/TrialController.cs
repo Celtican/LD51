@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 public class TrialController : MonoBehaviour
 {
 	public Gavel gavel;
+	public Docket docket;
 	public GameObject actorContainer;
 	public Vector3 defendantPosition;
 	public Vector3 plaintiffPosition;
@@ -39,6 +40,7 @@ public class TrialController : MonoBehaviour
 		StartDialogues(trial.dialogues);
 		gavel.enabled = true;
 		onNewTrial.Invoke();
+		docket.SetDocket(trial.caseName, trial.docket);
 	}
 	private void InstantiateActors() {
 		if (defendant != null) Destroy(defendant.gameObject);

@@ -38,3 +38,11 @@ MonoBehaviour:
     actor: 1
   - text: This seductress needs to learn her lesson.
     actor: 1
+  docket: 'This person was accused of stuff
+
+    - bullet one
+
+    - bullet two
+
+    -
+    etc'

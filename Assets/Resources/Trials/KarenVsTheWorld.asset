@@ -39,3 +39,11 @@ MonoBehaviour:
     actor: 1
   - text: ... Okay, I guess I deserve that one.
     actor: 0
+  docket: 'This person was accused of stuff
+
+    - bullet one
+
+    - bullet two
+
+    -
+    etc'
