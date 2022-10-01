@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
+  m_Name: Charlotte le Cheetah v. Balsa County
+  m_EditorClassIdentifier: 
+  caseName: Charlotte le Cheetah v. Balsa County
+  defendantPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
+    type: 3}
+  plaintiffPrefab: {fileID: 1025971890835566800, guid: 340fc3539c22b2546a7ef38eec40482f,
+    type: 3}
+  isGuilty: 1
+  dialogues:
+  - text: I clocked this cheetah speeding down the highway at over 100 miles per
+      hour.
+    actor: 1
+  - text: "She\u2019s refused to show up at court, and only sent this note to you,
+      Your Honor."
+    actor: 1
+  - text: "She\u2019s refused to show up at court, and only sent this note to you,
+      Your Honor."
+    actor: 1
+  dialogueOnInnocent:
+  - text: "Don\u2019t give in to her seduction, Your Honor!"
+    actor: 1
+  - text: "She\u2019ll just keep breaking the law!"
+    actor: 1
+  dialogueOnGuilty:
+  - text: Very wise, Your Honor.
+    actor: 1
+  - text: This seductress needs to learn her lesson.
+    actor: 1
