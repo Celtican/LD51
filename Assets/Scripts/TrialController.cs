@@ -8,17 +8,18 @@ public class TrialController : MonoBehaviour
 	public GameObject actorContainer;
 	public Vector3 defendantPosition;
 	public Vector3 plaintiffPosition;
+	public Trial debugTrial;
 
-	public Trial trial;
+	private Trial trial;
 	private List<Dialogue> dialogues;
 	private Actor defendant;
 	private Actor plaintiff;
 
 	private void Start() {
-		StartCase(trial);
+		if (debugTrial != null) StartTrial(debugTrial);
 	}
 
-	public void StartCase(Trial trial) {
+	public void StartTrial(Trial trial) {
 		this.trial = trial;
 		InstantiateActors();
 		StartDialogues(trial.dialogues);
