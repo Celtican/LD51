@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Actor : MonoBehaviour
 {
+	public SpriteRenderer sprite;
+
 	public enum Type {
 		Defendant,
 		Plaintiff,

@@ -55,6 +55,7 @@ public class TrialController : MonoBehaviour
 
 		if (trial.defendantPrefab != null) {
 			defendant = Instantiate(trial.defendantPrefab, defendantPosition, Quaternion.identity, actorContainer.transform).GetComponent<Actor>();
+			defendant.sprite.flipX = true;
 		}
 		if (trial.plaintiffPrefab != null) {
 			plaintiff = Instantiate(trial.plaintiffPrefab, plaintiffPosition, Quaternion.identity, actorContainer.transform).GetComponent<Actor>();
