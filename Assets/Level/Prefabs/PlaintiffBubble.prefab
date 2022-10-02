@@ -68,8 +68,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Yes you did!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c0d5617ab65674c47823685f21755229, type: 2}
+  m_sharedMaterial: {fileID: -2413031739676383096, guid: c0d5617ab65674c47823685f21755229,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -197,6 +198,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charactersPerSecond: 40
   timeDelayAfterTextComplete: 0.25
+  onTextFilled:
+    m_PersistentCalls:
+      m_Calls: []
   onDialogueComplete:
     m_PersistentCalls:
       m_Calls: []

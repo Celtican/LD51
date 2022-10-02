@@ -140,7 +140,7 @@ MonoBehaviour:
   highestAngle: -26
   maximumWackHeight: -3
   wackTime: 0.1
-  wackHeight: 1
+  wackHeight: 0.5
   head: {fileID: 8161076855237828215}
   onHitInnocent:
     m_PersistentCalls:
