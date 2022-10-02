@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
-  m_Name: YortleyVsYertle
+  m_Name: Yertle Turtle v. Lizzie Lizard
   m_EditorClassIdentifier: 
   caseName: Yertle Turtle v. Lizzie Lizard
   defendantPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
@@ -37,11 +37,11 @@ MonoBehaviour:
   - text: Huh? But he did walk across my lawn!
     actor: 1
   - text: I gave you a witness statement to prove it!
-    actor: 0
-  - text: That's not illegal though...
     actor: 1
+  - text: That's not illegal though...
+    actor: 0
   dialogueOnGuilty:
-  - text: I was just taking a shortcut!
+  - text: But there wasn't even a sidewalk to walk on...
     actor: 0
   - text: Haha! You deserve this!
     actor: 1

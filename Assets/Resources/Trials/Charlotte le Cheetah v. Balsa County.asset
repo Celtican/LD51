@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   caseName: Charlotte le Cheetah v. Balsa County
   defendantPrefab: {fileID: 0}
-  plaintiffPrefab: {fileID: 1025971890835566800, guid: 340fc3539c22b2546a7ef38eec40482f,
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
     type: 3}
   isGuilty: 1
   dialogues:
