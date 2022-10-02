@@ -9,6 +9,7 @@ public class DialogueBubble : MonoBehaviour
 {
 	public float charactersPerSecond = 20f;
 	public float timeDelayAfterTextComplete = 1f;
+	public UnityEvent onTextFilled;
 	public UnityEvent onDialogueComplete;
 	public bool isJudge = false;
 
@@ -35,6 +36,7 @@ public class DialogueBubble : MonoBehaviour
 				textContainer.text = targetText;
 				if (!complete && timeSinceStart - (1 / charactersPerSecond * targetText.Length) > timeDelayAfterTextComplete) {
 					complete = true;
+					onTextFilled.Invoke();
 				} else if (complete && timeSinceStart - (1 / charactersPerSecond * targetText.Length) > timeDelayAfterTextComplete*2) {
 					if (isJudge) HideBubble();
 					else isSpeaking = false;

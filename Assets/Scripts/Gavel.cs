@@ -20,6 +20,7 @@ public class Gavel : MonoBehaviour
     public float wackHeight = 0.5f;
     private float loweredTime;
     private float loweredHeight;
+    private Vector3 loweredHeadPosition;
 
     public GameObject head;
 
@@ -55,7 +56,8 @@ public class Gavel : MonoBehaviour
             if (mousePos.y < curPosition.y && mousePos.y < maximumWackHeight) {
                 loweredTime = Time.time;
                 loweredHeight = mousePos.y;
-            } else if ((mousePos.y > curPosition.y) &&
+                loweredHeadPosition = head.transform.position;
+			} else if ((mousePos.y > curPosition.y) &&
                     (Time.time - loweredTime < wackTime) &&
                     (mousePos.y > loweredHeight+wackHeight)) {
                 Wack();
@@ -78,10 +80,9 @@ public class Gavel : MonoBehaviour
     private void Wack() {
 		loweredTime = 0;
 		onWack.Invoke();
-        Vector3 wackPos = head.transform.position;
-		if (innocent != null && innocent.OverlapPoint(wackPos)) {
+		if (innocent != null && innocent.OverlapPoint(loweredHeadPosition)) {
 			onHitInnocent.Invoke();
-		} else if (guilty != null && guilty.OverlapPoint(wackPos)) {
+		} else if (guilty != null && guilty.OverlapPoint(loweredHeadPosition)) {
 			onHitGuilty.Invoke();
 		}
 	}

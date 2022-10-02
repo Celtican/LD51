@@ -26,10 +26,6 @@ public class Actor : MonoBehaviour
 		animator.SetBool("IsTalking", false);
 	}
 
-	public void Blab() {
-		
-	}
-
 	public enum Type {
 		Defendant,
 		Plaintiff,

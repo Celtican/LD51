@@ -100,13 +100,20 @@ public class TrialController : MonoBehaviour
 			GameObject prefab;
 			switch (dialogue.actor) {
 				case Actor.Type.Judge:
-				case Actor.Type.Defendant: prefab = defendantBubblePrefab; defendant.StartTalking(); break;
-				case Actor.Type.Plaintiff: prefab = plaintiffBubblePrefab; plaintiff.StartTalking(); break;
+				case Actor.Type.Defendant:
+					prefab = defendantBubblePrefab;
+					defendant.StartTalking();
+					break;
+				case Actor.Type.Plaintiff:
+					prefab = plaintiffBubblePrefab;
+					plaintiff.StartTalking();
+					break;
 				default: throw new Exception("Unknown actor");
 			}
 			DialogueBubble bubble = Instantiate(prefab, bubbleContainer.transform).GetComponent<DialogueBubble>();
 			latestBubble = bubble;
 			bubble.onDialogueComplete.AddListener(NextDialogue);
+			bubble.onTextFilled.AddListener(StopSpeaking);
 			bubble.Speak(dialogue.text);
 		} else {
 			onEndDialogue.Invoke();
@@ -136,5 +143,9 @@ public class TrialController : MonoBehaviour
 
 	public void InterruptSpeaking() {
 		if (latestBubble != null) latestBubble.InterruptSpeaking();
+	}
+	public void StopSpeaking() {
+		if (plaintiff != null) plaintiff.StopTalking();
+		if (defendant != null) defendant.StopTalking();
 	}
 }
