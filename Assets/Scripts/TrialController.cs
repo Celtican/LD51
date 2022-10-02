@@ -9,6 +9,9 @@ public class TrialController : MonoBehaviour
 {
 	public Gavel gavel;
 	public Docket docket;
+	public GameObject bubbleContainer;
+	public GameObject plaintiffBubblePrefab;
+	public GameObject defendantBubblePrefab;
 	public GameObject actorContainer;
 	public Vector3 defendantPosition;
 	public Vector3 plaintiffPosition;
@@ -20,6 +23,7 @@ public class TrialController : MonoBehaviour
 	private List<Trial> allTrials;
 	private Trial trial;
 	private List<Dialogue> dialogues;
+	private DialogueBubble latestBubble;
 	private Actor defendant;
 	private Actor plaintiff;
 	private bool ended = false;
@@ -51,15 +55,17 @@ public class TrialController : MonoBehaviour
 
 		if (trial.defendantPrefab != null) {
 			defendant = Instantiate(trial.defendantPrefab, defendantPosition, Quaternion.identity, actorContainer.transform).GetComponent<Actor>();
-			defendant.bubble.onDialogueComplete.AddListener(NextDialogue);
 		}
 		if (trial.plaintiffPrefab != null) {
 			plaintiff = Instantiate(trial.plaintiffPrefab, plaintiffPosition, Quaternion.identity, actorContainer.transform).GetComponent<Actor>();
-			plaintiff.bubble.onDialogueComplete.AddListener(NextDialogue);
 		}
 	}
 
 	private void StartDialogues(Dialogue[] dialogues) {
+		DialogueBubble[] bubbles = FindObjectsOfType<DialogueBubble>();
+		foreach (DialogueBubble bubble in bubbles) {
+			Destroy(bubble.gameObject);
+		}
 		this.dialogues = new List<Dialogue>(dialogues);
 		NextDialogue();
 	}
@@ -68,12 +74,17 @@ public class TrialController : MonoBehaviour
 		if (dialogues.Count > 0) {
 			Dialogue dialogue = dialogues[0];
 			dialogues.RemoveAt(0);
+			GameObject prefab;
 			switch (dialogue.actor) {
-				case Actor.Type.Defendant: defendant.bubble.Speak(dialogue.text); break;
-				case Actor.Type.Plaintiff: plaintiff.bubble.Speak(dialogue.text); break;
-				case Actor.Type.Judge: defendant.bubble.Speak("Judge is not yet implemented"); break;
+				case Actor.Type.Judge:
+				case Actor.Type.Defendant: prefab = defendantBubblePrefab; break;
+				case Actor.Type.Plaintiff: prefab = plaintiffBubblePrefab; break;
 				default: throw new Exception("Unknown actor");
 			}
+			DialogueBubble bubble = Instantiate(prefab, bubbleContainer.transform).GetComponent<DialogueBubble>();
+			latestBubble = bubble;
+			bubble.onDialogueComplete.AddListener(NextDialogue);
+			bubble.Speak(dialogue.text);
 		} else {
 			onEndDialogue.Invoke();
 			if (!gavel.enabled) StartRandomTrial(); // the judge made their decision
@@ -97,7 +108,6 @@ public class TrialController : MonoBehaviour
 	}
 
 	public void InterruptSpeaking() {
-		if (defendant != null) defendant.bubble.InterruptSpeaking();
-		if (plaintiff != null) plaintiff.bubble.InterruptSpeaking();
+		if (latestBubble != null) latestBubble.InterruptSpeaking();
 	}
 }

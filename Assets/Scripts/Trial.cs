@@ -13,6 +13,6 @@ public class Trial : ScriptableObject
 	public Dialogue[] dialogues;
 	public Dialogue[] dialogueOnInnocent;
 	public Dialogue[] dialogueOnGuilty;
-	[TextArea]
+	[TextArea(3,20)]
 	public string docket;
 }

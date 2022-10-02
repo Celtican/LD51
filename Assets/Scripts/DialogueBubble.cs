@@ -1,26 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class DialogueBubble : MonoBehaviour
 {
-	public float charactersPerSecond = 5f;
+	public float charactersPerSecond = 20f;
 	public float timeDelayAfterTextComplete = 1f;
 	public UnityEvent onDialogueComplete;
+	public bool isJudge = false;
 
 	private TMP_Text textContainer;
-	private SpriteRenderer textBack;
+	private Image textBack;
 	private string targetText = string.Empty;
 	private float startTime;
 	private bool isSpeaking = false;
 	private bool complete = false;
+	private bool interrupted = false;
 
 	private void Awake() {
 		textContainer = GetComponentInChildren<TMP_Text>();
-		textBack = GetComponentInChildren<SpriteRenderer>(true);
+		textBack = GetComponentInChildren<Image>(true);
 	}
 
 	private void Update() {
@@ -33,9 +35,10 @@ public class DialogueBubble : MonoBehaviour
 				textContainer.text = targetText;
 				if (!complete && timeSinceStart - (1 / charactersPerSecond * targetText.Length) > timeDelayAfterTextComplete) {
 					complete = true;
-					onDialogueComplete.Invoke();
 				} else if (complete && timeSinceStart - (1 / charactersPerSecond * targetText.Length) > timeDelayAfterTextComplete*2) {
-					HideBubble();
+					if (isJudge) HideBubble();
+					else isSpeaking = false;
+					if (!interrupted) onDialogueComplete.Invoke();
 				}
 			}
 		}
@@ -45,14 +48,15 @@ public class DialogueBubble : MonoBehaviour
 		textBack.enabled = true;
 		textContainer.text = string.Empty;
 		startTime = Time.time;
-		targetText = text;
+		targetText = text.Trim();
 		isSpeaking = true;
 		complete = false;
 	}
 
 	public void InterruptSpeaking() {
+		interrupted = true;
 		if (isSpeaking && GetNumVisibleCharacters() < targetText.Length) {
-			targetText = textContainer.text + "-";
+			targetText = textContainer.text.TrimEnd() + "-";
 		}
 	}
 
