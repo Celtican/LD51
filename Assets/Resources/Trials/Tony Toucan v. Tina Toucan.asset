@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
+  m_Name: Tony Toucan v. Tina Toucan
+  m_EditorClassIdentifier: 
+  caseName: Tony Toucan v. Tina Toucan
+  defendantPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
+    type: 3}
+  plaintiffPrefab: {fileID: 1025971890835566800, guid: 340fc3539c22b2546a7ef38eec40482f,
+    type: 3}
+  isGuilty: 0
+  dialogues:
+  - text: Why do you want a restraining order...?
+    actor: 2
+  - text: "She doesn\u2019t like my attitude, Your Honorest Honor. But that ain\u2019t
+      a crime!"
+    actor: 0
+  - text: "I don\u2019t like you, Tony. You\u2019re such a nag!"
+    actor: 1
+  - text: "Of course I\u2019m gonna nag you if you don\u2019t pay your rent on time!"
+    actor: 0
+  dialogueOnInnocent:
+  - text: "No! This isn\u2019t fair! Why do you believe him over me?"
+    actor: 0
+  - text: "She may not like me, but that\u2019s her problem. "
+    actor: 1
+  - text: "She just doesn\u2019t want to pay me her rent no more."
+    actor: 1
+  dialogueOnGuilty:
+  - text: How am I supposed to honor this, Your Honor? She lives in MY house!
+    actor: 0
+  - text: See? Even the Judge understands - this is what really happens when you
+      mess with the family!
+    actor: 1
+  docket: "This agreement is between home owner, Tony Toucan and renter, Tina Toucan,
+    for the rental of a room at 157 Balsa Wood Avenue.\r\nAmount: 300 jungle coins
+    / month\nTo be paid: 1st of every month - NO EXCEPTIONS! \n(No, Tina, not even
+    for family!)"
