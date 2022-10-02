@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
+  m_Name: Kyle Koala v. Tina the Shopkeeper
+  m_EditorClassIdentifier: 
+  caseName: Kyle Koala v. Tina the Shopkeeper
+  defendantPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
+    type: 3}
+  plaintiffPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
+    type: 3}
+  isGuilty: 0
+  dialogues:
+  - text: "This animal stole from my store, Your Honor! Here\u2019s the list of missing
+      items."
+    actor: 1
+  - text: "It wasn\u2019t me, Your Honor, I swear. I\u2019m a vegetarian!"
+    actor: 0
+  - text: Arrest him!
+    actor: 1
+  - text: "I'm telling you, you\u2019ve got the wrong guy!"
+    actor: 0
+  dialogueOnInnocent:
+  - text: What? Are you blind, Judge?
+    actor: 1
+  - text: "I told you \u2013 I\u2019m a vegetarian!"
+    actor: 0
+  dialogueOnGuilty:
+  - text: Ha! Off to prison with you, thief!
+    actor: 1
+  - text: "What? No, but I can\u2019t go to prison!"
+    actor: 0
+  - text: I have children to feed! And they defintiely don't eat steak and sausages!
+    actor: 0
+  docket: 'List of Missing Items:
+
+    2 Prime Cut Caribou steaks
+
+    6 zebra
+    sausage links
+
+    1 can Lightning Boar Soda'
