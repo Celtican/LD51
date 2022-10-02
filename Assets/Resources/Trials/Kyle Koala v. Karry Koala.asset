@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
+  m_Name: Kyle Koala v. Karry Koala
+  m_EditorClassIdentifier: 
+  caseName: Kyle Koala v. Karry Koala
+  defendantPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
+    type: 3}
+  plaintiffPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
+    type: 3}
+  isGuilty: 1
+  dialogues:
+  - text: I want this vulgar bear thrown in jail at once, Your Honor!
+    actor: 1
+  - text: "I\u2019m a marsupial, not a bear!"
+    actor: 0
+  - text: Whatever! He was stalking me, and singing a song about how he will follow
+      me!
+    actor: 1
+  - text: I was not! I just happened to be walking down the same street!
+    actor: 0
+  - text: And I happened to like singing. Is that a crime now?
+    actor: 0
+  dialogueOnInnocent:
+  - text: Well, I never!
+    actor: 1
+  - text: "Serves you all right for sticking your nose in a koala\u2019s business!"
+    actor: 0
+  - text: Now let me out of here, asap!
+    actor: 0
+  dialogueOnGuilty:
+  - text: "So, it\u2019s actually a crime to like music now? Sheesh\u2026"
+    actor: 0
+  - text: No, but it IS a crime to stalk a woman!
+    actor: 1
+  docket: "Police Report from Balsa County PD:\nSuspect was seen walking down the
+    street humming a song about following some animal wherever he or she may go.
+    It\u2019s unclear at the time if it was just an unfortunate coincidence, or if
+    the suspect was, in fact, following Ms. Koala, but witnesses state that Mr. Koala
+    appeared to be duck into alleys or behind trash cans whenever Ms. Koala turned
+    around."
