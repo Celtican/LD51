@@ -27,7 +27,7 @@ MonoBehaviour:
     actor: 1
   - text: I was in an accident...
     actor: 0
-  - text: See he just admitted it! You ran into MY brand new car!
+  - text: See! See! He just admitted it! You ran into MY brand new car!
     actor: 1
   dialogueOnInnocent:
   - text: What?! That's impossible! He can't be innocent!

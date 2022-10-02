@@ -41,9 +41,8 @@ MonoBehaviour:
     actor: 1
   - text: Fine!
     actor: 0
-  - text: But YOU'RE paying my dry cleaning bill
-    actor: 0
-  - text: if my suit gets 1 spot of dirt on it!
+  - text: But YOU'RE paying my dry cleaning bill if my suit gets 1 spot of dirt on
+      it!
     actor: 0
   docket: Suspect was caught at the intersection with red ink on his hands. He smashed
     into the light as he ran it, and knocked the witness Mr. Turtlle, on his back.
