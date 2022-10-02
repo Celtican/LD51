@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Gavel : MonoBehaviour
 {
@@ -21,7 +22,6 @@ public class Gavel : MonoBehaviour
     {
         collider = GetComponent<Collider2D>();
         startPosition = transform.position;
-        enabled = false;
     }
 
     // Update is called once per frame
@@ -49,10 +49,10 @@ public class Gavel : MonoBehaviour
 		Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		isGrabbed = false;
 		transform.position = startPosition;
-		if (innocent.OverlapPoint(mousePos)) {
+		if (innocent != null && innocent.OverlapPoint(mousePos)) {
 			enabled = false;
 			onHitInnocent.Invoke();
-		} else if (guilty.OverlapPoint(mousePos)) {
+		} else if (guilty != null && guilty.OverlapPoint(mousePos)) {
 			enabled = false;
 			onHitGuilty.Invoke();
 		}
@@ -60,5 +60,9 @@ public class Gavel : MonoBehaviour
 
     private void OnDisable() {
         transform.position = startPosition;
+    }
+
+    public void SwitchScenes(string scene) {
+        SceneManager.LoadScene(scene);
     }
 }
