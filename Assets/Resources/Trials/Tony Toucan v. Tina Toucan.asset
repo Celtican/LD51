@@ -30,18 +30,18 @@ MonoBehaviour:
     actor: 0
   dialogueOnInnocent:
   - text: "No! This isn\u2019t fair! Why do you believe him over me?"
-    actor: 0
+    actor: 1
   - text: "She may not like me, but that\u2019s her problem. "
-    actor: 1
+    actor: 0
   - text: "She just doesn\u2019t want to pay me her rent no more."
-    actor: 1
+    actor: 0
   dialogueOnGuilty:
   - text: How am I supposed to honor this, Your Honor? She lives in MY house!
     actor: 0
   - text: See? Even the Judge understands - this is what really happens when you
       mess with the family!
     actor: 1
-  docket: "This agreement is between home owner, Tony Toucan and renter, Tina Toucan,
-    for the rental of a room at 157 Balsa Wood Avenue.\r\nAmount: 300 jungle coins
-    / month\nTo be paid: 1st of every month - NO EXCEPTIONS! \n(No, Tina, not even
-    for family!)"
+  docket: "Rental Agreement:\nThis agreement is between home owner, Tony Toucan and
+    renter, Tina Toucan, for the rental of a room at 157 Balsa Wood Avenue.\r\nAmount:
+    300 jungle coins / month\nTo be paid: 1st of every month - NO EXCEPTIONS! \n(No,
+    Tina, not even for family!)"
