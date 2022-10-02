@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charactersPerSecond: 40
-  timeDelayAfterTextComplete: 0.5
+  timeDelayAfterTextComplete: 0.25
   onDialogueComplete:
     m_PersistentCalls:
       m_Calls: []
