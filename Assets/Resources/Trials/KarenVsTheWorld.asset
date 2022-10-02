@@ -12,20 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
   m_Name: KarenVsTheWorld
   m_EditorClassIdentifier: 
-  caseName: Karen Vs The World
+  caseName: Karen Vs The World (ala Tony Toucan)
   defendantPrefab: {fileID: 1025971890835566800, guid: 340fc3539c22b2546a7ef38eec40482f,
     type: 3}
   plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
     type: 3}
   isGuilty: 1
   dialogues:
-  - text: This thinks he's sly! He pickpocketed me while I was looking right at him!
+  - text: This guy thinks he's so smooth. He swiped my wallet while I was looking
+      right at him!
     actor: 1
-  - text: Nah, you got me all wrong. I ain't no thief.
+  - text: Nah, Liz, you got me all wrong. I ain't no thief.
     actor: 0
-  - text: Uh huh, and where did my wallet go?
+  - text: Right, then how do you explain how my wallet ended up in your pocket?
     actor: 1
-  - text: Heh. You owed me rent. I'm just takin' what's mine.
+  - text: What? You owed me rent. I'm just takin' what's mine.
     actor: 0
   - text: That is sooooo illegal! Get 'im, judge!
     actor: 1
@@ -37,13 +38,14 @@ MonoBehaviour:
   dialogueOnGuilty:
   - text: Ha!
     actor: 1
-  - text: ... Okay, I guess I deserve that one.
+  - text: '... Okay, I guess I deserved that one. '
     actor: 0
-  docket: 'This person was accused of stuff
+  - text: You still owe me rent, Ms. Lizard! I won't forget!
+    actor: 0
+  docket: 'Witness Statement:
 
-    - bullet one
-
-    - bullet two
-
-    -
-    etc'
+    "I saw Ms. Lizard talking to Mr. Turtle when grabbed
+    her purse and yanked out her wallet. When Ms. Lizard demanded to see the manager
+    and have him detained, most animals turned away, not wanting to deal with her
+    screeching voice. But I saw him take her wallet. This Karen definitely had a
+    reason to complain."'
