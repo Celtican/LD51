@@ -57,4 +57,8 @@ public class Gavel : MonoBehaviour
 			onHitGuilty.Invoke();
 		}
 	}
+
+    private void OnDisable() {
+        transform.position = startPosition;
+    }
 }

@@ -30,4 +30,8 @@ public class Docket : MonoBehaviour
 		this.title.text = title;
 		this.body.text = body;
 	}
+
+	private void OnDisable() {
+		transform.position = startPos;
+	}
 }

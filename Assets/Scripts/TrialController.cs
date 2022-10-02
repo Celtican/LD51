@@ -22,6 +22,7 @@ public class TrialController : MonoBehaviour
 	private List<Dialogue> dialogues;
 	private Actor defendant;
 	private Actor plaintiff;
+	private bool ended = false;
 
 	private void Start() {
 		allTrials = new List<Trial>(Resources.LoadAll<Trial>("Trials"));
@@ -30,10 +31,12 @@ public class TrialController : MonoBehaviour
 	}
 
 	public void StartRandomTrial() {
+		if (ended) return;
 		if (allTrials.Count == 0) onWin.Invoke();
 		else StartTrial(allTrials[Random.Range(0, allTrials.Count)]);
 	}
 	public void StartTrial(Trial trial) {
+		if (ended) return;
 		this.trial = trial;
 		allTrials.Remove(trial);
 		InstantiateActors();
@@ -87,7 +90,13 @@ public class TrialController : MonoBehaviour
 		StartDialogues(trial.dialogueOnGuilty);
 	}
 
-	private void InterruptSpeaking() {
+	public void EndDialogue() {
+		ended = true;
+		dialogues.Clear();
+		InterruptSpeaking();
+	}
+
+	public void InterruptSpeaking() {
 		if (defendant != null) defendant.bubble.InterruptSpeaking();
 		if (plaintiff != null) plaintiff.bubble.InterruptSpeaking();
 	}
