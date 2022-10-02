@@ -45,11 +45,7 @@ MonoBehaviour:
     actor: 0
   - text: if my suit gets 1 spot of dirt on it!
     actor: 0
-  docket: 'This person was accused of stuff
-
-    - bullet one
-
-    - bullet two
-
-    -
-    etc'
+  docket: Suspect was caught at the intersection with red ink on his hands. He smashed
+    into the light as he ran it, and knocked the witness Mr. Turtlle, on his back.
+    Emergency services came to assist Mr. Turtle in turning back on his feet. Witness
+    is shaken,and has a red stain on his shell, but otherwise unharmed.

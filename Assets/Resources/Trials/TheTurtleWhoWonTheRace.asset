@@ -41,11 +41,9 @@ MonoBehaviour:
     actor: 0
   - text: Yeah, you're a turtle that scratched my new car!
     actor: 1
-  docket: 'This person was accused of stuff
+  docket: 'Police Report from Balsa County PD:
 
-    - bullet one
-
-    - bullet two
-
-    -
-    etc'
+    Mr. Turtle is  a key witness
+    in another ongoing case. The red paint on his shell is key evidence for this
+    case and, in fact, originated from an ink spill at a busted stop light, not from
+    a car. The hue doesn''t even match the red pain on Ms. LIzard''s car.'
