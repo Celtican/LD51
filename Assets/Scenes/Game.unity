@@ -566,7 +566,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 207612925}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce7745509337e494a88d4fa3dce93910, type: 3}
   m_Name: 
@@ -1694,7 +1694,7 @@ MonoBehaviour:
   actorContainer: {fileID: 1548369673}
   defendantPosition: {x: 4.4, y: -0.27, z: 0}
   plaintiffPosition: {x: -4.4, y: -0.27, z: 0}
-  debugTrial: {fileID: 11400000, guid: 1f64b262c749584499b12025c7e94567, type: 2}
+  debugTrial: {fileID: 0}
   onNewTrial:
     m_PersistentCalls:
       m_Calls:
@@ -2466,7 +2466,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730317687}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce7745509337e494a88d4fa3dce93910, type: 3}
   m_Name: 
