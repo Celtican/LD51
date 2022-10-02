@@ -8,15 +8,19 @@ public class Docket : MonoBehaviour
 {
 	public TMP_Text title;
 	public TMP_Text body;
+	public bool obtain;
 
 	private new Collider2D collider;
 	private Animator animator;
-	private AudioRandomizer audio;
+	private new AudioRandomizer audio;
 
 	private void Awake() {
 		collider = GetComponent<Collider2D>();
 		animator = GetComponent<Animator>();
 		audio = GetComponent<AudioRandomizer>();
+	}
+	private void Start() {
+		if (obtain) animator.SetTrigger("Obtain");
 	}
 
 	private void Update() {
