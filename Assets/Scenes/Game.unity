@@ -1026,7 +1026,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422968769}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.804, z: 0}
+  m_LocalPosition: {x: 0, y: 0.95, z: 0}
   m_LocalScale: {x: 0.9301, y: 0.9301, z: 0.9301}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2336,8 +2336,8 @@ MonoBehaviour:
   gavel: {fileID: 713064336}
   docket: {fileID: 603340253}
   actorContainer: {fileID: 1548369673}
-  defendantPosition: {x: -4, y: -1, z: 0}
-  plaintiffPosition: {x: 4, y: -1, z: 0}
+  defendantPosition: {x: -4.4, y: -0.27, z: 0}
+  plaintiffPosition: {x: 4.4, y: -0.27, z: 0}
   debugTrial: {fileID: 0}
   onNewTrial:
     m_PersistentCalls:
