@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
+  m_Name: Tony Toucan v. Larry Lizard
+  m_EditorClassIdentifier: 
+  caseName: Tony Toucan v. Larry Lizard
+  defendantPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
+    type: 3}
+  plaintiffPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
+    type: 3}
+  isGuilty: 1
+  dialogues:
+  - text: 'Your Honor, I caught Tony Toucan trespassing on my property! '
+    actor: 1
+  - text: "And that feathered fiend can\u2019t even be bothered to face me in court!"
+    actor: 1
+  - text: Did he steal anything?
+    actor: 0
+  - text: 'Nah, I busted his feathered behind before he had the chance. '
+    actor: 1
+  - text: I have proof! Look inside the docket!
+    actor: 1
+  - text: "Um\u2026 I don\u2019 think these pictures are what you think they are\u2026"
+    actor: 2
+  - text: Wh---What?
+    actor: 1
+  dialogueOnInnocent:
+  - text: "He has something on you too, don\u2019t he?"
+    actor: 1
+  - text: I knew that Tony Toucan was a snake. Figuratively speaking, of course.
+    actor: 1
+  dialogueOnGuilty:
+  - text: 'Your Honor, I demand you arrest that toucan as soon as you can! '
+    actor: 1
+  - text: "Also, can you please, um, discretely ispose of those photos\u2026.?"
+    actor: 1
+  docket: "Exhibit A:\nCensored for nude content. You don\u2019t want to see Larry
+    Lizard this way, Judge. Trust us, we're doing you a favor."
