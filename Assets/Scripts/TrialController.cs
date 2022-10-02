@@ -127,6 +127,7 @@ public class TrialController : MonoBehaviour
 		if (prosecuted) return;
 		prosecuted = true;
 		InterruptSpeaking();
+		docket.Dispose();
 		StartDialogues(trial.dialogueOnInnocent, true);
 	}
 
@@ -134,6 +135,7 @@ public class TrialController : MonoBehaviour
 		if (prosecuted) return;
 		prosecuted = true;
 		InterruptSpeaking();
+		docket.Dispose();
 		StartDialogues(trial.dialogueOnGuilty, true);
 	}
 

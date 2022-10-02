@@ -27,6 +27,5 @@ public class AudioRandomizer : MonoBehaviour
 		if (randomPitchRange > 0) audioSource.pitch = pitch + Random.Range(-randomPitchRange, randomPitchRange);
 		if (randomVolumeRange > 0) audioSource.volume = volume + Random.Range(-randomVolumeRange, randomVolumeRange);
         audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)]);
-        print("Playing sound?");
 	}
 }

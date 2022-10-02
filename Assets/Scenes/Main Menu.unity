@@ -1230,12 +1230,12 @@ PrefabInstance:
     - target: {fileID: 1705476547506248241, guid: d6926a143f9457a4b872579aa3071a0e,
         type: 3}
       propertyPath: m_text
-      value: "Use your mouse to pick up the gavel (mallet) and smack to play button
+      value: "Use your mouse to pick up the gavel (mallet) and smack the play button
         to start the game.\n\nMake quick judgments to determine who did it and who
         is innocent to win!\n\n<b>Credits:</b>\nEvidence obtained directly from the
         crime scene indicates that these conspiritors conspired to develop this game:\n\n\u2022
-        The <i>awesomest</i> by <b>Aida</b>\n\u2022 The <i>mind blowingest</i> art
-        by <b>Robin</b>\n\u2022 The <i>bustedest</i> code by <b>Dylan</b>\n\u2022
+        The <i>awesomest</i> narrative by <b>Aida</b>\n\u2022 The <i>mind blowingest</i>
+        art by <b>Robin</b>\n\u2022 The <i>bustedest</i> code by <b>Dylan</b>\n\u2022
         The <i>grooviest</i> music and sounds by <b>Miguel</b>\n\n<i>Made in 72 hours
         for Ludum Dare 51, \"Every 10 Seconds\"</i>"
       objectReference: {fileID: 0}

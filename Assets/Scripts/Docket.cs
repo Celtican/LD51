@@ -2,36 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Docket : MonoBehaviour
 {
-	public Vector3 raisedPos;
 	public TMP_Text title;
 	public TMP_Text body;
 
 	private new Collider2D collider;
-	private Vector3 startPos;
+	private Animator animator;
+	private AudioRandomizer audio;
 
-	private void Start() {
+	private void Awake() {
 		collider = GetComponent<Collider2D>();
-		startPos = transform.position;
+		animator = GetComponent<Animator>();
+		audio = GetComponent<AudioRandomizer>();
 	}
 
 	private void Update() {
 		Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		if (collider.OverlapPoint(mousePos)) {
-			transform.position = raisedPos;
-		} else {
-			transform.position = startPos;
-		}
+		animator.SetBool("IsRisen", collider.OverlapPoint(mousePos));
 	}
 
 	public void SetDocket(string title, string body) {
+		animator.SetTrigger("Obtain");
 		this.title.text = title;
 		this.body.text = body;
 	}
+	public void Dispose() {
+		animator.SetTrigger("Dispose");
+		audio.RandomPlay();
+	}
 
 	private void OnDisable() {
-		transform.position = startPos;
+		animator.SetBool("IsRisen", false);
 	}
 }
