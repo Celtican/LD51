@@ -8,8 +8,8 @@ using Random = UnityEngine.Random;
 
 public class AudioRandomizer : MonoBehaviour
 {
-    public float randomPitchRange;
-    public float randomVolumeRange;
+    [Range(0f,0.5f)] public float randomPitchRange;
+	[Range(0f, 0.5f)] public float randomVolumeRange;
     public AudioClip[] audioClips;
 
     private AudioSource audioSource;
@@ -18,12 +18,15 @@ public class AudioRandomizer : MonoBehaviour
 
     private void Awake() {
         audioSource = GetComponent<AudioSource>();
+        pitch = audioSource.pitch;
+        volume = audioSource.volume;
     }
 
     public void RandomPlay() {
         if (audioClips.Length == 0) throw new Exception("AudioRandomizer requires at least one audio clip");
-		audioSource.pitch = pitch + Random.Range(-randomPitchRange, randomPitchRange);
-		audioSource.volume = volume + Random.Range(-randomVolumeRange, randomVolumeRange);
+		if (randomPitchRange > 0) audioSource.pitch = pitch + Random.Range(-randomPitchRange, randomPitchRange);
+		if (randomVolumeRange > 0) audioSource.volume = volume + Random.Range(-randomVolumeRange, randomVolumeRange);
         audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)]);
+        print("Playing sound?");
 	}
 }

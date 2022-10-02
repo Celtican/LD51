@@ -9,12 +9,26 @@ public class Gavel : MonoBehaviour
     public Collider2D innocent;
     public Collider2D guilty;
 
+    public float lowestY = 0.15f;
+    public float highestY = 4;
+    public float lowestAngle = 20;
+    public float highestAngle = -26;
+    private float defaultAngle;
+
+    public float maximumWackHeight = -3;
+    public float wackTime = 0.2f;
+    public float wackHeight = 0.5f;
+    private float loweredTime;
+    private float loweredHeight;
+
+    public GameObject head;
+
     public UnityEvent onHitInnocent;
     public UnityEvent onHitGuilty;
+    public UnityEvent onWack;
 
     private bool isGrabbed = false;
 	private Vector3 startPosition;
-    private Vector3 grabbedOffset;
 	private new Collider2D collider;
 
     // Start is called before the first frame update
@@ -22,12 +36,14 @@ public class Gavel : MonoBehaviour
     {
         collider = GetComponent<Collider2D>();
         startPosition = transform.position;
+        defaultAngle = transform.eulerAngles.z;
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0;
         if (Input.GetMouseButtonDown(0) && collider.OverlapPoint(mousePos)) {
             Grab();
         } else if (isGrabbed && Input.GetMouseButtonUp(0)) {
@@ -35,31 +51,49 @@ public class Gavel : MonoBehaviour
         }
 
         if (isGrabbed) {
-			transform.position = mousePos + grabbedOffset;
+            Vector3 curPosition = transform.position;
+            if (mousePos.y < curPosition.y && mousePos.y < maximumWackHeight) {
+                loweredTime = Time.time;
+                loweredHeight = mousePos.y;
+            } else if ((mousePos.y > curPosition.y) &&
+                    (Time.time - loweredTime < wackTime) &&
+                    (mousePos.y > loweredHeight+wackHeight)) {
+                Wack();
+            }
+			transform.position = mousePos;
+
+			Vector3 angle = transform.eulerAngles;
+            float yPos = Mathf.Clamp(transform.localPosition.y, lowestY, highestY);
+            float percentY = (yPos - lowestY)/(highestY-lowestY);
+            float angleDif = highestAngle - lowestAngle;
+            angle.z = lowestAngle + angleDif * percentY;
+            transform.eulerAngles = angle;
 		}
     }
 
     private void Grab() {
-		Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		isGrabbed = true;
-		grabbedOffset = startPosition - mousePos;
 	}
 
-    private void Release() {
-		Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		isGrabbed = false;
-		transform.position = startPosition;
-		if (innocent != null && innocent.OverlapPoint(mousePos)) {
-			enabled = false;
+    private void Wack() {
+		loweredTime = 0;
+		onWack.Invoke();
+        Vector3 wackPos = head.transform.position;
+		if (innocent != null && innocent.OverlapPoint(wackPos)) {
 			onHitInnocent.Invoke();
-		} else if (guilty != null && guilty.OverlapPoint(mousePos)) {
-			enabled = false;
+		} else if (guilty != null && guilty.OverlapPoint(wackPos)) {
 			onHitGuilty.Invoke();
 		}
 	}
 
+    private void Release() {
+		isGrabbed = false;
+		transform.position = startPosition;
+        transform.eulerAngles = new Vector3(0, 0, defaultAngle);
+	}
+
     private void OnDisable() {
-        transform.position = startPosition;
+        Release();
     }
 
     public void SwitchScenes(string scene) {

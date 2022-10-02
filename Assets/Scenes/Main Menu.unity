@@ -660,9 +660,9 @@ SpriteRenderer:
   m_SortingLayerID: 755494883
   m_SortingLayer: 2
   m_SortingOrder: -20
-  m_Sprite: {fileID: 21300000, guid: ac2946ff7e5644e4687d1ae5940ca4eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dade80e19a7a19b4faad18f79a23dff6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 5.36, y: 2.55}
@@ -1025,7 +1025,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000019868214, y: 0}
   serializedVersion: 2
-  m_Radius: 1.3052539
+  m_Radius: 2.6448243
 --- !u!212 &779197899
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1409,7 +1409,7 @@ SpriteRenderer:
   m_SortingLayerID: 755494883
   m_SortingLayer: 2
   m_SortingOrder: -20
-  m_Sprite: {fileID: 21300000, guid: 36a00b6eb9a92a74195693dd2b9bb667, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dade80e19a7a19b4faad18f79a23dff6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

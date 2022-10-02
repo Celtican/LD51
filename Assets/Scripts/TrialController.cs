@@ -7,7 +7,6 @@ using Random = UnityEngine.Random;
 
 public class TrialController : MonoBehaviour
 {
-	public Gavel gavel;
 	public Docket docket;
 	public GameObject bubbleContainer;
 	public GameObject plaintiffBubblePrefab;
@@ -27,6 +26,7 @@ public class TrialController : MonoBehaviour
 	private Actor defendant;
 	private Actor plaintiff;
 	private bool ended = false;
+	private bool prosecuted = false;
 
 	private void Start() {
 		allTrials = new List<Trial>(Resources.LoadAll<Trial>("Trials"));
@@ -42,10 +42,10 @@ public class TrialController : MonoBehaviour
 	public void StartTrial(Trial trial) {
 		if (ended) return;
 		this.trial = trial;
+		prosecuted = false;
 		allTrials.Remove(trial);
 		InstantiateActors();
 		StartDialogues(trial.dialogues, false);
-		gavel.enabled = true;
 		docket.SetDocket(trial.caseName, trial.docket);
 	}
 	private void InstantiateActors() {
@@ -110,16 +110,20 @@ public class TrialController : MonoBehaviour
 			bubble.Speak(dialogue.text);
 		} else {
 			onEndDialogue.Invoke();
-			if (!gavel.enabled) StartRandomTrial(); // the judge made their decision
+			if (prosecuted) StartRandomTrial(); // the judge made their decision
 		}
 	}
 
 	public void ChooseInnocent() {
+		if (prosecuted) return;
+		prosecuted = true;
 		InterruptSpeaking();
 		StartDialogues(trial.dialogueOnInnocent, true);
 	}
 
 	public void ChooseGuilty() {
+		if (prosecuted) return;
+		prosecuted = true;
 		InterruptSpeaking();
 		StartDialogues(trial.dialogueOnGuilty, true);
 	}
