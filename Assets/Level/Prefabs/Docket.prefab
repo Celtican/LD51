@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 1705476547354783900}
   - component: {fileID: 1705476547354783903}
   - component: {fileID: 1705476547354783901}
+  - component: {fileID: 5939190020944321178}
   m_Layer: 0
   m_Name: Docket
   m_TagString: Untagged
@@ -215,6 +216,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5939190020944321178
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705476547354783897}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1705476547506248243
 GameObject:
   m_ObjectHideFlags: 0

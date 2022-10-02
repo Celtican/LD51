@@ -16,6 +16,7 @@ public class TrialController : MonoBehaviour
 	public Vector3 plaintiffPosition;
 	public Trial debugTrial;
 	public UnityEvent onNewTrial;
+	public UnityEvent onEndTrial;
 	public UnityEvent onEndDialogue;
 	public UnityEvent onWin;
 
@@ -41,6 +42,7 @@ public class TrialController : MonoBehaviour
 	}
 	public void StartTrial(Trial trial) {
 		if (ended) return;
+		onEndTrial.Invoke();
 		this.trial = trial;
 		prosecuted = false;
 		allTrials.Remove(trial);

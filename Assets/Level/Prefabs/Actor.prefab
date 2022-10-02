@@ -168,7 +168,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.433
+  m_Volume: 0.227
   m_Pitch: 0.66
   Loop: 0
   Mute: 0
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomPitchRange: 0.124
-  randomVolumeRange: 0.199
+  randomVolumeRange: 0.093
   audioClips:
   - {fileID: 8300000, guid: 0754ab322b1be674c9836573651b0691, type: 3}
   - {fileID: 8300000, guid: c5b9fbaf1cf55d34a83c133fbfdf3b9b, type: 3}

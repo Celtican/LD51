@@ -87,7 +87,7 @@ public class Gavel : MonoBehaviour
 		}
 	}
 
-    private void Release() {
+    public void Release() {
 		isGrabbed = false;
 		transform.position = startPosition;
         transform.eulerAngles = new Vector3(0, 0, defaultAngle);
