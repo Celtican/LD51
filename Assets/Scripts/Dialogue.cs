@@ -6,6 +6,6 @@ using UnityEngine;
 [Serializable]
 public class Dialogue
 {
-	public string text;
+	[TextArea(1,2)] public string text;
 	public Actor.Type actor;
 }
