@@ -10,30 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
-  m_Name: Kyle Koala v. Karry Koala
+  m_Name: Kyle Koala v. Kat
   m_EditorClassIdentifier: 
-  caseName: Kyle Koala v. Karry Koala
+  caseName: Kyle Koala v. Kat
   caseNumber: 0
-  defendantPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
+  defendantPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
     type: 3}
-  plaintiffPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: 57886b877ad83cd44b33ac07173d7afb,
     type: 3}
-  isGuilty: 1
   verdict: 1
   dialogues:
-  - text: I want this vulgar bear thrown in jail at once, Your Honor!
+  - text: I want this perve thrown in jail at once, Your Honor!
     actor: 1
-  - text: "I\u2019m a marsupial, not a bear!"
-    actor: 0
-  - text: Whatever! He was stalking me, and singing a song about how he will follow
-      me!
+  - text: He was stalking me, and singing a song about how he will follow me!
     actor: 1
   - text: I was not! I just happened to be walking down the same street!
     actor: 0
   - text: And I happened to like singing. Is that a crime now?
     actor: 0
   dialogueOnInnocent:
-  - text: Well, I never!
+  - text: Whatever. Stay away from me, you perve!
     actor: 1
   - text: "Serves you all right for sticking your nose in a koala\u2019s business!"
     actor: 0
@@ -45,9 +41,13 @@ MonoBehaviour:
   - text: No, but it IS a crime to stalk a woman!
     actor: 1
   showDocket: 1
-  docket: "Police Report from Balsa County PD:\nSuspect was seen walking down the
-    street humming a song about following some animal wherever he or she may go.
-    It\u2019s unclear at the time if it was just an unfortunate coincidence, or if
-    the suspect was, in fact, following Ms. Koala, but witnesses state that Mr. Koala
-    appeared to be duck into alleys or behind trash cans whenever Ms. Koala turned
-    around."
+  docket: 'Police Report from Balsa County PD - Summary:
+
+    *Witness saw the suspect
+    walking behind Ms. Kat
+
+    *He frequently ducked behind trash cans and into
+    alleys whenever she turned to look in his direction.
+
+    *He was also singing
+    about following her wherever she may go.'
