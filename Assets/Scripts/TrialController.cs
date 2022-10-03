@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class TrialController : MonoBehaviour
@@ -28,6 +29,8 @@ public class TrialController : MonoBehaviour
 	public UnityEvent onLose;
 	public UnityEvent onWinGood;
 	public UnityEvent onWinBad;
+	public Sprite judgeInnocentBubble;
+	public Sprite judgeGuiltyBubble;
 
 	private List<Trial> trials;
 	private Trial trial;
@@ -81,6 +84,7 @@ public class TrialController : MonoBehaviour
 				timer.RestartTimer();
 			}
 			if (trial.verdict != Trial.Verdict.NoJudgment) canProsecute = true;
+			judgeBubble.GetComponent<DialogueBubble>().textBack.sprite = judgeInnocentBubble;
 		});
 	}
 
@@ -237,6 +241,7 @@ public class TrialController : MonoBehaviour
 
 	public void ChooseInnocent() {
 		if (!canProsecute || prosecuted) return;
+		judgeBubble.GetComponent<DialogueBubble>().textBack.sprite = judgeInnocentBubble;
 		canProsecute = false;
 		if (trial.verdict == Trial.Verdict.Either || trial.verdict == Trial.Verdict.Innocent) {
 			if (timer.GetTimeLeft() > 0) bonusTimer.AddTime(5);
@@ -253,6 +258,7 @@ public class TrialController : MonoBehaviour
 
 	public void ChooseGuilty() {
 		if (!canProsecute || prosecuted) return;
+		judgeBubble.GetComponent<DialogueBubble>().textBack.sprite = judgeGuiltyBubble;
 		canProsecute = false;
 		if (trial.verdict == Trial.Verdict.Either || trial.verdict == Trial.Verdict.Guilty) {
 			if (timer.GetTimeLeft() > 0) bonusTimer.AddTime(5);

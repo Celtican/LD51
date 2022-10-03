@@ -27,6 +27,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1470807109893169545, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: themeSong
+      value: 
+      objectReference: {fileID: 8300000, guid: 53b3a731901beef4981d5335d23008a3, type: 3}
     - target: {fileID: 4188067173898003175, guid: 697ac9a1093828a4191f48545e760d8a,
         type: 3}
       propertyPath: m_Sprite

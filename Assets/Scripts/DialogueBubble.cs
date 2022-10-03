@@ -12,9 +12,9 @@ public class DialogueBubble : MonoBehaviour
 	public UnityEvent onTextFilled;
 	public UnityEvent onDialogueComplete;
 	public bool isJudge = false;
+	public Image textBack;
 
 	private TMP_Text textContainer;
-	private Image textBack;
 	private string targetText = string.Empty;
 	private float startTime;
 	private bool isSpeaking = false;

@@ -9,11 +9,27 @@ public class Actor : MonoBehaviour
 	public SpriteRenderer sprite;
 	public UnityEvent onReady;
 	public UnityEvent onExit;
+	public AudioClip themeSong;
 
+	private AudioClip previousSong;
 	private Animator animator;
 
 	private void Awake() {
 		animator = GetComponent<Animator>();
+	}
+
+	private void Start() {
+		if (themeSong != null) {
+			AudioSource music = GetMusicSource();
+			previousSong = music.clip;
+			music.Stop();
+			music.clip = themeSong;
+			music.Play();
+		}
+	}
+
+	private AudioSource GetMusicSource() {
+		return GameObject.Find("Music").GetComponent<AudioSource>();
 	}
 
 	public void CallOnReady() {
@@ -21,6 +37,12 @@ public class Actor : MonoBehaviour
 	}
 	public void CallOnExit() {
 		onExit.Invoke();
+		if (previousSong != null) {
+			AudioSource music = GetMusicSource();
+			music.Stop();
+			music.clip = previousSong;
+			music.Play();
+		}
 	}
 
 	public void StartTalking() {
