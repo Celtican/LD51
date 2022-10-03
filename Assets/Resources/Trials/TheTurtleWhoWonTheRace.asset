@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: TheTurtleWhoWonTheRace
   m_EditorClassIdentifier: 
   caseName: The Turtle Who Won The Race
+  caseNumber: 0
   defendantPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
     type: 3}
   plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
     type: 3}
-  isGuilty: 0
+  verdict: 0
   dialogues:
   - text: This stupid turtle scratched my new car!
     actor: 1
@@ -27,7 +28,9 @@ MonoBehaviour:
     actor: 1
   - text: I was in an accident...
     actor: 0
-  - text: See! See! He just admitted it! You ran into MY brand new car!
+  - text: See! See! He just admitted it!
+    actor: 1
+  - text: You ran into MY brand new car!
     actor: 1
   dialogueOnInnocent:
   - text: What?! That's impossible! He can't be innocent!
@@ -37,11 +40,9 @@ MonoBehaviour:
   dialogueOnGuilty:
   - text: But I.... I'm just a turtle.
     actor: 0
-  - text: Yeah, you're a turtle that scratched my new car!
+  - text: Yeah, you're a turtle who scratched my new car!
     actor: 1
-  docket: 'Police Report from Balsa County PD:
-
-    Mr. Turtle is  a key witness
-    in another ongoing case. The red paint on his shell is key evidence for this
-    case and, in fact, originated from an ink spill at a busted stop light, not from
-    a car. The hue doesn''t even match the red pain on Ms. LIzard''s car.'
+  showDocket: 1
+  docket: "Police Report from Balsa County PD \u2013 Summary:\n*Paint on suspect's
+    shell is not a match for Ms. Lizard's car.\n*Suspect is a key witness in another
+    ongoing case."
