@@ -14,14 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   caseName: Charles v. Balsa County
   caseNumber: 0
-  defendantPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
+  defendantPrefab: {fileID: 2796485231300183252, guid: 24f9233681827d54c9800df4fdc802e1,
     type: 3}
-  plaintiffPrefab: {fileID: 1025971890835566800, guid: 340fc3539c22b2546a7ef38eec40482f,
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: 262a5c11f3101d4468340a65e504aa81,
     type: 3}
-  isGuilty: 1
   verdict: 1
   dialogues:
-  - text: 'This cheetah was caught red-pawed running a red light! '
+  - text: 'This cheetah was caught red-pawed running a stop sign! '
     actor: 1
   - text: I'm innocent, Your Honor.
     actor: 0
@@ -47,10 +46,10 @@ MonoBehaviour:
       it!
     actor: 0
   showDocket: 1
-  docket: 'Police Report from Balsa County PD:
-
-    Suspect was caught at the intersection
-    with red ink on his hands. He smashed into the light as he ran it, and knocked
-    the witness Mr. Turtlle, on his back. Emergency services came to assist Mr. Turtle
-    in turning back on his feet. Witness is shaken,and has a red paint stain on his
-    shell, but otherwise unharmed.'
+  docket: "Police Report from Balsa County PD:\r\nCharles Cheetah arrested on a traffic
+    violation\r\n*Suspect caught at the intersection after run into a newly painted
+    stop sign.\r\n*Paint cans nearby spilled onto the road.\r\n*Suspect nearly ran
+    over witness, Yertle Turtle.\r\n*Suspect tried to run from the scene.\r\n*Witness
+    was flipped on his back, getting red paint on his shell.\r\n*Emergency services
+    rushed to assist Mr. Turtle  and get him back on his feet.\r\n*Red paint stain
+    on witness\u2019s shell is key evidence for this case."
