@@ -268,7 +268,7 @@ public class TrialController : MonoBehaviour
 		prosecuted = true;
 		InterruptSpeaking();
 		StopTimers();
-		docket.Dispose();
+		if (trial.showDocket) docket.Dispose();
 	}
 
 	public void EndDialogue() {
