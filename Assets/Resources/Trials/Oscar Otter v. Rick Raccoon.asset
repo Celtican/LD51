@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
+  m_Name: Oscar Otter v. Rick Raccoon
+  m_EditorClassIdentifier: 
+  caseName: Oscar Otter v. Rick Raccoon
+  caseNumber: 0
+  defendantPrefab: {fileID: 2796485231300183252, guid: 21df2fe77d8a34d4099eafefd4df9e9f,
+    type: 3}
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: 0b0ae53a57764cb449de2140f4ea36f1,
+    type: 3}
+  verdict: 2
+  dialogues:
+  - text: "This otter sold me a faulty car, and he won\u2019t let me return it!"
+    actor: 1
+  - text: I told you, all sales are final.
+    actor: 0
+  - text: The car barely got out of the lot before it broke down!
+    actor: 1
+  - text: "If it\u2019s off the lot, it\u2019s out of our hands\u2026"
+    actor: 0
+  - text: "You can\u2019t let this sleaze-ball get away with this, judge!"
+    actor: 1
+  dialogueOnInnocent:
+  - text: Innocent!
+    actor: 2
+  - text: "What? You\u2019ve got to be joking!"
+    actor: 1
+  - text: Always get it in writing.
+    actor: 0
+  - text: "That\u2019s what I always say,"
+    actor: 0
+  - text: "and that\u2019s why the law is always on my side."
+    actor: 0
+  - text: "Why you\u2026"
+    actor: 1
+  dialogueOnGuilty:
+  - text: GUILTY!
+    actor: 2
+  - text: Yes! Give me my money, you crook!
+    actor: 1
+  - text: "Fine. But you are no longer welcome at Oscar\u2019s Autos."
+    actor: 0
+  - text: "Like I\u2019d buy anything from you again!"
+    actor: 1
+  showDocket: 1
+  docket: "Sales Receipt from Oscar\u2019s Autos:\r\n\n1 Purple Convertible, used
+    \u2013 70 Jungle Coins\n\r\nAll sales purchases are non-refundable\n\n\n*Sales
+    items may not be in working condition. We are not responsible for defunct or
+    dysfunctional vehicles.*"
