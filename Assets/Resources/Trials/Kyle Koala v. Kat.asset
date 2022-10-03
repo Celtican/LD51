@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   caseName: Kyle Koala v. Kat
   caseNumber: 0
-  defendantPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
+  defendantPrefab: {fileID: 1025971890835566800, guid: 340fc3539c22b2546a7ef38eec40482f,
     type: 3}
   plaintiffPrefab: {fileID: 2796485231300183252, guid: 57886b877ad83cd44b33ac07173d7afb,
     type: 3}
