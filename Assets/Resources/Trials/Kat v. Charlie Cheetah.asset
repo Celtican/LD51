@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
+  m_Name: Kat v. Charlie Cheetah
+  m_EditorClassIdentifier: 
+  caseName: Kat v. Charlie Cheetah
+  caseNumber: 0
+  defendantPrefab: {fileID: 2796485231300183252, guid: 57886b877ad83cd44b33ac07173d7afb,
+    type: 3}
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: 24f9233681827d54c9800df4fdc802e1,
+    type: 3}
+  verdict: 2
+  dialogues:
+  - text: Your Honor, I demand you arrest this vagrant for attacking me!
+    actor: 1
+  - text: You started it with your pompous attitude.
+    actor: 0
+  - text: Someone had to teach you a lesson.
+    actor: 0
+  - text: You scratched up my brand new jacket!
+    actor: 1
+  - text: "You can afford a new one, can\u2019t you?"
+    actor: 0
+  - text: "That\u2019s not the point!"
+    actor: 1
+  dialogueOnInnocent:
+  - text: Innocent!
+    actor: 2
+  - text: Ha! Serves you right for being such a baby!
+    actor: 0
+  - text: "But, Your Honor, who\u2019s going to pay to replace my jacket?"
+    actor: 1
+  - text: Figure it out, genius!
+    actor: 0
+  dialogueOnGuilty:
+  - text: GUILTY!
+    actor: 2
+  - text: You heard the judge. Pay up, kittie-kat.
+    actor: 1
+  - text: Do you want to lose another jacket, pretty boy?
+    actor: 0
+  showDocket: 1
+  docket: 'Exhibit A:
+
+
+    Charles Cheetah''s jacket.
+
+
+    Large claw marks in
+    the leather indicate cooberate the victim''s story.
+
+
+    Claw marks are not
+    a conclusive match for the suspect.'
