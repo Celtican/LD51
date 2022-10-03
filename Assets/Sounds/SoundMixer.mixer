@@ -21,7 +21,7 @@ AudioMixerEffectController:
     m_GUID: 1c712f41cb4034349bc3492f627c3a7f
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
-  m_Bypass: 1
+  m_Bypass: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -37,7 +37,9 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 5239b907fb916064f9551393f0a5709e
+    name: MasterVolume
   m_AudioMixerGroupViews:
   - guids:
     - 3d6b7977dc2bbe749812cf7d0caf0c41
