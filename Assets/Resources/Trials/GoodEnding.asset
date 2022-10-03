@@ -15,16 +15,23 @@ MonoBehaviour:
   caseName: Good Ending
   caseNumber: -1
   defendantPrefab: {fileID: 0}
-  plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: 262a5c11f3101d4468340a65e504aa81,
     type: 3}
-  isGuilty: 0
   verdict: 3
   dialogues:
-  - text: Hey bub. Nice job getting those cases done.
+  - text: Hey, nice job, Judge-y!
     actor: 1
-  - text: You, uh... actually did a decent job.
+  - text: You finished all of your cases
     actor: 1
-  - text: Maybe it's about time I gave ya that tutorial, huh?
+  - text: and you actually did a pretty good job of it!
+    actor: 1
+  - text: "I honestly didn\u2019t think you could do it."
+    actor: 1
+  - text: You sure proved me wrong!
+    actor: 1
+  - text: What do you say we grab a beer to celebrate?
+    actor: 1
+  - text: On you, of course.
     actor: 1
   dialogueOnInnocent: []
   dialogueOnGuilty: []

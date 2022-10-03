@@ -15,20 +15,23 @@ MonoBehaviour:
   caseName: Bad Ending
   caseNumber: -1
   defendantPrefab: {fileID: 0}
-  plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: 262a5c11f3101d4468340a65e504aa81,
     type: 3}
-  isGuilty: 0
   verdict: 3
   dialogues:
-  - text: Hey bub. Nice job getting those cases done.
+  - text: So, you finished all your cases, huh?
     actor: 1
-  - text: But, uh, I gotta tell you something, listen closely, bub...
+  - text: "Big freakin\u2019 deal!"
     actor: 1
-  - text: ... closer...
+  - text: "I could\u2019ve done it too if I just banged your gavel around"
     actor: 1
-  - text: YOU ARE A HORRIBLE JUDGE OF CHARACTER!
+  - text: without a care in the world for actual truth and justice.
     actor: 1
-  - text: End of story, cya in the dumpsters, bub!
+  - text: You should be ashamed of yourself.
+    actor: 1
+  - text: 'But hey, you still get a cushy paycheck at the end of the month, '
+    actor: 1
+  - text: so what do you care, right?
     actor: 1
   dialogueOnInnocent: []
   dialogueOnGuilty: []
