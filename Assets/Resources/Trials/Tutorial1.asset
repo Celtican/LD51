@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
+  m_Name: Tutorial1
+  m_EditorClassIdentifier: 
+  caseName: Tutorial 1
+  caseNumber: 1
+  defendantPrefab: {fileID: 0}
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
+    type: 3}
+  isGuilty: 0
+  verdict: 2
+  dialogues:
+  - text: Hey, bub. I heard ya wanted a tutorial.
+    actor: 1
+  - text: Well, I'm the tutorial guy. Cya, I decided no tutorials for you bub.
+    actor: 1
+  - text: Smack either Guilty or Innocent to continue.
+    actor: 1
+  dialogueOnInnocent:
+  - text: Yeah, just like that!
+    actor: 1
+  dialogueOnGuilty:
+  - text: Yeah, just like that!
+    actor: 1
+  showDocket: 0
+  docket: 

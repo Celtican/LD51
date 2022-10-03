@@ -7,12 +7,22 @@ using UnityEngine;
 public class Trial : ScriptableObject
 {
 	public string caseName;
+	public int caseNumber;
 	public GameObject defendantPrefab;
 	public GameObject plaintiffPrefab;
 	public bool isGuilty;
+	public Verdict verdict = Verdict.Innocent;
 	public Dialogue[] dialogues;
 	public Dialogue[] dialogueOnInnocent;
 	public Dialogue[] dialogueOnGuilty;
+	public bool showDocket = true;
 	[TextArea(3,20)]
 	public string docket;
+
+	public enum Verdict {
+		Innocent,
+		Guilty,
+		Either,
+		NoJudgment
+	}
 }
