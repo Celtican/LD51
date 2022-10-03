@@ -27,6 +27,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9582bfc3e3e005b4d8aa3fe4d4b18917, type: 3}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f05c5f60d92c0f4090098e2913947f1, type: 3}
     - target: {fileID: 4188067173898003175, guid: 697ac9a1093828a4191f48545e760d8a,
         type: 3}
       propertyPath: m_Sprite

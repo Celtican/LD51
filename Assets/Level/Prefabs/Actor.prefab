@@ -296,6 +296,7 @@ MonoBehaviour:
       m_Calls: []
   themeSong: {fileID: 0}
   footsteps: {fileID: 1475166861487419125}
+  debugTalk: 0
 --- !u!95 &6538144121567522786
 Animator:
   serializedVersion: 4
@@ -330,7 +331,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.227
-  m_Pitch: 0.66
+  m_Pitch: 1.28
   Loop: 0
   Mute: 0
   Spatialize: 0

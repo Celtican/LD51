@@ -27,6 +27,86 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: fd739a4e4d5a511419fd8e9ccbdc0d24, type: 3}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 98c4ee1228b2453408050111c2b86172, type: 3}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: bbe3e4ae1273c87489d8f01ef6e60bea, type: 3}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 763f9a899767ec54bb39f301a241f4cd, type: 3}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: db49e5438fdebd44c978310354a29e06, type: 3}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c42e616164723b45bf57055fb865ef5, type: 3}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0314140f526b4f84ea1638e76af8ac2c, type: 3}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 68bc4b885c364674383bfe873a21bc75, type: 3}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 227277a1ec09ecf43ae4c38e049e3184, type: 3}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 91af85cad4bc40f4780fe212e304d253, type: 3}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8438949950bcf554a9dadc5572359694, type: 3}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: 05beee7a03ccab14d95d3368f6455a46, type: 3}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: 05dba6b0297677b42bd0528f674450ca, type: 3}
+    - target: {fileID: 2381300042182838078, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: audioClips.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: a8b49108cfdb077439e4e521c57d1e51, type: 3}
+    - target: {fileID: 3102512957018727951, guid: 697ac9a1093828a4191f48545e760d8a,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 4188067173898003175, guid: 697ac9a1093828a4191f48545e760d8a,
         type: 3}
       propertyPath: m_Sprite

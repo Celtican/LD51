@@ -15,6 +15,7 @@ public class Trial : ScriptableObject
 	public Dialogue[] dialogueOnInnocent;
 	public Dialogue[] dialogueOnGuilty;
 	public bool showDocket = true;
+	public Sprite docketSprite;
 	[TextArea(3,20)]
 	public string docket;
 

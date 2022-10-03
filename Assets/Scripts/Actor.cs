@@ -14,6 +14,7 @@ public class Actor : MonoBehaviour
 
 	private AudioClip previousSong;
 	private Animator animator;
+	public bool debugTalk;
 
 	private void Awake() {
 		animator = GetComponent<Animator>();
@@ -26,6 +27,9 @@ public class Actor : MonoBehaviour
 			music.Stop();
 			music.clip = themeSong;
 			music.Play();
+		}
+		if (debugTalk) {
+			StartTalking();
 		}
 	}
 

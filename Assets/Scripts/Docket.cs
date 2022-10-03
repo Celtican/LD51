@@ -10,6 +10,7 @@ public class Docket : MonoBehaviour
 	public TMP_Text body;
 	public bool obtain;
 	public AudioRandomizer liftSound;
+	public SpriteRenderer specialSprite;
 
 	private new Collider2D collider;
 	private Animator animator;
@@ -29,11 +30,12 @@ public class Docket : MonoBehaviour
 		animator.SetBool("IsRisen", collider.OverlapPoint(mousePos));
 	}
 
-	public void SetDocket(string title, string body) {
+	public void SetDocket(string title, string body, Sprite sprite) {
 		animator.SetTrigger("Obtain");
 		this.title.text = title;
 		this.body.text = body;
 		PlayLiftSound();
+		specialSprite.sprite = sprite;
 	}
 	public void Dispose() {
 		animator.SetTrigger("Dispose");

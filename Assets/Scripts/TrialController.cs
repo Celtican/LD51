@@ -130,7 +130,7 @@ public class TrialController : MonoBehaviour
 			InstantiateActors();
 			StartDialogues(trial.dialogues, false);
 		}
-		if (trial.showDocket) docket.SetDocket(trial.caseName, trial.docket);
+		if (trial.showDocket) docket.SetDocket(trial.caseName, trial.docket, trial.docketSprite);
 	}
 	private void InstantiateActors() {
 		if (defendant != null) {
