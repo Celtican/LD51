@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Yertle Turtle v. Lizzie Lizard
   m_EditorClassIdentifier: 
   caseName: Yertle Turtle v. Lizzie Lizard
+  caseNumber: 0
   defendantPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
     type: 3}
-  plaintiffPrefab: {fileID: 1025971890835566800, guid: 340fc3539c22b2546a7ef38eec40482f,
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
     type: 3}
-  isGuilty: 0
+  verdict: 0
   dialogues:
   - text: I warned you, Yertle!
     actor: 1
@@ -45,6 +46,7 @@ MonoBehaviour:
     actor: 0
   - text: Haha! You deserve this!
     actor: 1
+  showDocket: 1
   docket: 'Witness Statement:
 
     "I saw Mr. Turtle deliberately walk across Ms.

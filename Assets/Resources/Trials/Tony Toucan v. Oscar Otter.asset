@@ -16,21 +16,21 @@ MonoBehaviour:
   caseNumber: 0
   defendantPrefab: {fileID: 2796485231300183252, guid: e60e2027091731b42a8c31d6cf5f3a27,
     type: 3}
-  plaintiffPrefab: {fileID: 1025971890835566800, guid: 340fc3539c22b2546a7ef38eec40482f,
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: 21df2fe77d8a34d4099eafefd4df9e9f,
     type: 3}
   verdict: 1
   dialogues:
   - text: 'Your Honor, I caught Tony Toucan trespassing on my property! '
     actor: 1
-  - text: I didn't steal nothing off nobody's property!
+  - text: You can't prove nothing, you low life otter.
     actor: 0
-  - text: Nah, I busted your feathered behind before you had the chance!
+  - text: I caught your feathered behind myself!
     actor: 1
   - text: I have proof!, Your Honor! Look inside the docket!
     actor: 1
   - text: Haha, I think you're gonna regret it if you do, boss.
     actor: 0
-  - text: I'm warning you.
+  - text: Don't say I didn't warn you'se.
     actor: 0
   dialogueOnInnocent:
   - text: Wh--what? How did you get those photos?

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   caseName: Kyle Koala v. Tina the Shopkeeper
   caseNumber: 0
-  defendantPrefab: {fileID: 1025971890835566800, guid: 340fc3539c22b2546a7ef38eec40482f,
+  defendantPrefab: {fileID: 2796485231300183252, guid: 6820a10573e15f446968a21f79b25d89,
     type: 3}
   plaintiffPrefab: {fileID: 2796485231300183252, guid: 42c45ee815cedcd45a762b056308a4b9,
     type: 3}

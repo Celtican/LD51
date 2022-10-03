@@ -13,34 +13,40 @@ MonoBehaviour:
   m_Name: Tony Toucan v. Tina Toucan
   m_EditorClassIdentifier: 
   caseName: Tony Toucan v. Tina Toucan
-  defendantPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
+  caseNumber: 0
+  defendantPrefab: {fileID: 2796485231300183252, guid: e60e2027091731b42a8c31d6cf5f3a27,
     type: 3}
-  plaintiffPrefab: {fileID: 1025971890835566800, guid: 340fc3539c22b2546a7ef38eec40482f,
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: 42c45ee815cedcd45a762b056308a4b9,
     type: 3}
-  isGuilty: 0
+  verdict: 0
   dialogues:
-  - text: Why do you want a restraining order...?
-    actor: 2
-  - text: "She doesn\u2019t like my attitude, Your Honorest Honor. But that ain\u2019t
-      a crime!"
-    actor: 0
-  - text: "I don\u2019t like you, Tony. You\u2019re such a nag!"
+  - text: Hey Judge, can you tell this bird-brained loser
     actor: 1
-  - text: "Of course I\u2019m gonna nag you if you don\u2019t pay your rent on time!"
+  - text: that family members shouldn't have to pay rent?
+    actor: 1
+  - text: They certainly do when they sign a contract saying they will.
+    actor: 0
+  - text: "I don\u2019t like you, Tony. You\u2019re a terrible cousin!"
+    actor: 1
+  - text: That may be, but you still owe me rent!
     actor: 0
   dialogueOnInnocent:
-  - text: "No! This isn\u2019t fair! Why do you believe him over me?"
+  - text: Does family mean NOTHING to either of you?
     actor: 1
-  - text: "She may not like me, but that\u2019s her problem. "
+  - text: If you're family, you honor our agreement.
     actor: 0
-  - text: "She just doesn\u2019t want to pay me her rent no more."
+  - text: If you don't honor it, you ain't family no more.
     actor: 0
   dialogueOnGuilty:
-  - text: How am I supposed to honor this, Your Honor? She lives in MY house!
+  - text: What am I supposed to do with this?
     actor: 0
-  - text: See? Even the Judge understands - this is what really happens when you
-      mess with the family!
+  - text: I'm still 300 jungle coins in the hole for this!
+    actor: 0
+  - text: Ah-ha! Family doesn't have to pay rent!
     actor: 1
+  - text: Eat that, Tony!
+    actor: 1
+  showDocket: 1
   docket: "Rental Agreement:\nThis agreement is between home owner, Tony Toucan and
     renter, Tina Toucan, for the rental of a room at 157 Balsa Wood Avenue.\r\nAmount:
     300 jungle coins / month\nTo be paid: 1st of every month \n- NO EXCEPTIONS! \n(No,
