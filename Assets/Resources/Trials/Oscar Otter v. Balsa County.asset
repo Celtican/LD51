@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
+  m_Name: Oscar Otter v. Balsa County
+  m_EditorClassIdentifier: 
+  caseName: Oscar Otter v. Balsa County
+  caseNumber: 0
+  defendantPrefab: {fileID: 2796485231300183252, guid: 21df2fe77d8a34d4099eafefd4df9e9f,
+    type: 3}
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: 262a5c11f3101d4468340a65e504aa81,
+    type: 3}
+  verdict: 2
+  dialogues:
+  - text: The defendant is accused of laundering money
+    actor: 1
+  - text: through a shell waste disposal company
+    actor: 1
+  - text: located in the Magnolia Islands.
+    actor: 1
+  - text: "I\u2019m a business man."
+    actor: 0
+  - text: Is it a crime to run multiple businesses in multiple locations?
+    actor: 0
+  - text: Oh yeah?
+    actor: 1
+  - text: "Let\u2019s see some stats on how much \u201Cwaste\u201D you\u2019ve disposed
+      of"
+    actor: 1
+  - text: ' in the last year.'
+    actor: 1
+  - text: I only just opened the business this year, officer.
+    actor: 0
+  - text: "Don\u2019t be so rough with me."
+    actor: 0
+  dialogueOnInnocent:
+  - text: Innocent!
+    actor: 2
+  - text: "I told you \u2013 I\u2019m just an honest business man"
+    actor: 0
+  - text: doing honest business.
+    actor: 0
+  - text: And I always pay my taxes.
+    actor: 0
+  - text: You have no proof of anything nefarious going on.
+    actor: 0
+  - text: "One of these days, Otter, you\u2019re gonna slip up,"
+    actor: 1
+  - text: "and I\u2019m gonna be there to catch you!"
+    actor: 1
+  dialogueOnGuilty:
+  - text: GUILTY!
+    actor: 2
+  - text: "Certainly you can\u2019t prosecute a man for owning a business."
+    actor: 0
+  - text: "I\u2019m going to have to demand a retrial."
+    actor: 0
+  - text: "Yeah, well, in the meantime, you\u2019re going to prison."
+    actor: 1
+  - text: "We\u2019ll see how well your little front does while you\u2019re locked
+      up!"
+    actor: 1
+  showDocket: 1
+  docket: "Business Report Summary:\n\nOscar\u2019s Waste Disposal Company\r\n\n5374
+    Magnolia Way, Magnolia Islands\r\n\r\nNet Worth 150 Million Jungle Coins"
