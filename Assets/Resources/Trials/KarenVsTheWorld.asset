@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   caseName: Karen Vs The World (ala Tony Toucan)
   caseNumber: 0
-  defendantPrefab: {fileID: 1025971890835566800, guid: 340fc3539c22b2546a7ef38eec40482f,
+  defendantPrefab: {fileID: 2796485231300183252, guid: e60e2027091731b42a8c31d6cf5f3a27,
     type: 3}
   plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
     type: 3}
-  isGuilty: 1
   verdict: 1
   dialogues:
-  - text: This guy thinks he's so smooth. He swiped my wallet while I was looking
-      right at him!
+  - text: This guy thinks he's so smooth.
     actor: 1
-  - text: Nah, Liz, you got me all wrong. I ain't no thief.
+  - text: He swiped my wallet while I was looking right at him!
+    actor: 1
+  - text: Nah, Lizzie, you got me all wrong. I ain't no thief.
     actor: 0
   - text: Right, then how do you explain how my wallet ended up in your pocket?
     actor: 1
@@ -42,13 +42,12 @@ MonoBehaviour:
     actor: 1
   - text: '... Okay, I guess I deserved that one. '
     actor: 0
-  - text: You still owe me rent, Ms. Lizard! I won't forget!
+  - text: You still owe me rent, Lizzie! Don't think I'll forget!
     actor: 0
   showDocket: 1
-  docket: 'Witness Statement:
-
-    "I saw Ms. Lizard talking to Mr. Turtle when grabbed
-    her purse and yanked out her wallet. When Ms. Lizard demanded to see the manager
-    and have him detained, most animals turned away, not wanting to deal with her
-    screeching voice. But I saw him take her wallet. This Karen definitely had a
-    reason to complain."'
+  docket: "Summary of Witness Statement:\n*Witness saw Ms. Lizard talking to the
+    suspect.\n*Suspect grabbed Ms. Lizard's purse and wallet.\n*Ms. Lizard demanded
+    a store clerk to get his manager and arrest the suspect.\r\n*Other witnesses
+    at the scene made themselves scarce when Ms. Lizard started screeching.\r\n\r\nWitness
+    states: \u201CI saw him take her wallet. This Karen definitely had a reason to
+    complain for once.\u201D"
