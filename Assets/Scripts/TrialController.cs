@@ -11,6 +11,7 @@ public class TrialController : MonoBehaviour
 	public GameObject bubbleContainer;
 	public GameObject plaintiffBubblePrefab;
 	public GameObject defendantBubblePrefab;
+	public GameObject judgeBubble;
 	public GameObject actorContainer;
 	public Vector3 defendantPosition;
 	public Vector3 plaintiffPosition;
@@ -39,7 +40,6 @@ public class TrialController : MonoBehaviour
 						throw new Exception("Two trials have the same case number. Case numbers above 0 must be unique.");
 					}
 				}
-				print("Adding specific trial");
 				specificTrials.Add(allTrials[i]);
 				allTrials.RemoveAt(i);
 			} else if (allTrials[i].caseNumber < 0) {
@@ -59,10 +59,6 @@ public class TrialController : MonoBehaviour
 				trials.Add(allTrials[r]);
 				allTrials.RemoveAt(r);
 			}
-		}
-
-		foreach(Trial trial in trials) {
-			print(trial.caseName);
 		}
 
 		if (debugTrial != null) StartTrial(debugTrial);
@@ -147,13 +143,13 @@ public class TrialController : MonoBehaviour
 	private void StartDialogues(Dialogue[] dialogues, bool start) {
 		DialogueBubble[] bubbles = FindObjectsOfType<DialogueBubble>();
 		foreach (DialogueBubble bubble in bubbles) {
-			Destroy(bubble.gameObject);
+			if (!bubble.isJudge) Destroy(bubble.gameObject);
 		}
 		this.dialogues = new List<Dialogue>(dialogues);
 		if (start) NextDialogue();
 	}
 
-	private void NextDialogue() {
+	public void NextDialogue() {
 		if (plaintiff != null) plaintiff.StopTalking();
 		if (defendant != null) defendant.StopTalking();
 
@@ -163,6 +159,9 @@ public class TrialController : MonoBehaviour
 			GameObject prefab;
 			switch (dialogue.actor) {
 				case Actor.Type.Judge:
+					prefab = null;
+					judgeBubble.GetComponent<DialogueBubble>().Speak(dialogue.text);
+					break;
 				case Actor.Type.Defendant:
 					prefab = defendantBubblePrefab;
 					defendant.StartTalking();
@@ -173,11 +172,13 @@ public class TrialController : MonoBehaviour
 					break;
 				default: throw new Exception("Unknown actor");
 			}
-			DialogueBubble bubble = Instantiate(prefab, bubbleContainer.transform).GetComponent<DialogueBubble>();
-			latestBubble = bubble;
-			bubble.onDialogueComplete.AddListener(NextDialogue);
-			bubble.onTextFilled.AddListener(StopSpeaking);
-			bubble.Speak(dialogue.text);
+			if (prefab != null) {
+				DialogueBubble bubble = Instantiate(prefab, bubbleContainer.transform).GetComponent<DialogueBubble>();
+				latestBubble = bubble;
+				bubble.onDialogueComplete.AddListener(NextDialogue);
+				bubble.onTextFilled.AddListener(StopSpeaking);
+				bubble.Speak(dialogue.text);
+			}
 		} else {
 			onEndDialogue.Invoke();
 			if (prosecuted || trial.verdict == Trial.Verdict.NoJudgment) StartNextTrial();

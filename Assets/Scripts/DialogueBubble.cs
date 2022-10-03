@@ -38,8 +38,9 @@ public class DialogueBubble : MonoBehaviour
 					complete = true;
 					onTextFilled.Invoke();
 				} else if (complete && timeSinceStart - (1 / charactersPerSecond * targetText.Length) > timeDelayAfterTextComplete*2) {
+					print("Dialogue ended! " + textContainer.text);
 					if (isJudge) HideBubble();
-					else isSpeaking = false;
+					isSpeaking = false;
 					if (!interrupted) onDialogueComplete.Invoke();
 				}
 			}
@@ -47,12 +48,14 @@ public class DialogueBubble : MonoBehaviour
 	}
 
 	public void Speak(string text) {
+		if (isJudge) GetComponent<Animator>().SetBool("Visible", true);
 		textBack.enabled = true;
 		textContainer.text = string.Empty;
 		startTime = Time.time;
 		targetText = text.Trim();
 		isSpeaking = true;
 		complete = false;
+		interrupted = false;
 	}
 
 	public void InterruptSpeaking() {
@@ -64,9 +67,7 @@ public class DialogueBubble : MonoBehaviour
 
 	public void HideBubble() {
 		if (isJudge) {
-			textBack.enabled = false;
-			textContainer.text = string.Empty;
-			isSpeaking = false;
+			GetComponent<Animator>().SetBool("Visible", false);
 		} else {
 			GetComponent<Animator>().SetBool("Disappear", true);
 		}

@@ -17,7 +17,6 @@ MonoBehaviour:
   defendantPrefab: {fileID: 0}
   plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
     type: 3}
-  isGuilty: 0
   verdict: 2
   dialogues:
   - text: Hey, bub. I heard ya wanted a tutorial.
@@ -27,9 +26,13 @@ MonoBehaviour:
   - text: Smack either Guilty or Innocent to continue.
     actor: 1
   dialogueOnInnocent:
+  - text: Innocent!
+    actor: 2
   - text: Yeah, just like that!
     actor: 1
   dialogueOnGuilty:
+  - text: GUILTY!
+    actor: 2
   - text: Yeah, just like that!
     actor: 1
   showDocket: 0
