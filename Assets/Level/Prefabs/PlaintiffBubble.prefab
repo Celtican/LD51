@@ -76,7 +76,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 0
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 6931152008735364204}
   - component: {fileID: 2791503409525826296}
   - component: {fileID: 1807123393400934799}
+  - component: {fileID: 3647703206834610044}
   m_Layer: 5
   m_Name: PlaintiffBubble
   m_TagString: Untagged
@@ -205,6 +206,26 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isJudge: 0
+--- !u!95 &3647703206834610044
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7721179714341210874}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2032319800de87f4c86961a4ce54a2a8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8752587425005981653
 GameObject:
   m_ObjectHideFlags: 0

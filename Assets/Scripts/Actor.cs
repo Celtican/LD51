@@ -8,6 +8,7 @@ public class Actor : MonoBehaviour
 {
 	public SpriteRenderer sprite;
 	public UnityEvent onReady;
+	public UnityEvent onExit;
 
 	private Animator animator;
 
@@ -18,12 +19,19 @@ public class Actor : MonoBehaviour
 	public void CallOnReady() {
 		onReady.Invoke();
 	}
+	public void CallOnExit() {
+		onExit.Invoke();
+	}
 
 	public void StartTalking() {
 		animator.SetBool("IsTalking", true);
 	}
 	public void StopTalking() {
 		animator.SetBool("IsTalking", false);
+	}
+
+	public void Exit() {
+		animator.SetTrigger("Exit");
 	}
 
 	public enum Type {

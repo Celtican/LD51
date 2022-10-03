@@ -83,8 +83,23 @@ public class TrialController : MonoBehaviour
 		onEndTrial.Invoke();
 		this.trial = trial;
 		prosecuted = false;
-		InstantiateActors();
-		StartDialogues(trial.dialogues, false);
+		if (defendant != null || plaintiff != null) {
+			if (defendant != null) {
+				defendant.onExit.AddListener(() => {
+					InstantiateActors();
+					StartDialogues(trial.dialogues, false);
+				});
+			} else if (plaintiff != null) {
+				plaintiff.onExit.AddListener(() => {
+					InstantiateActors();
+					StartDialogues(trial.dialogues, false);
+				});
+			}
+			ExitActors();
+		} else {
+			InstantiateActors();
+			StartDialogues(trial.dialogues, false);
+		}
 		if (trial.showDocket) docket.SetDocket(trial.caseName, trial.docket);
 	}
 	private void InstantiateActors() {
@@ -117,6 +132,15 @@ public class TrialController : MonoBehaviour
 		if (defendant == null && plaintiff == null) {
 			NextDialogue();
 			onNewTrial.Invoke();
+		}
+	}
+
+	private void ExitActors() {
+		if (defendant != null) defendant.Exit();
+		if (plaintiff != null) plaintiff.Exit();
+		DialogueBubble[] bubbles = FindObjectsOfType<DialogueBubble>();
+		foreach (DialogueBubble bubble in bubbles) {
+			bubble.HideBubble();
 		}
 	}
 

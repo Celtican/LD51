@@ -63,9 +63,16 @@ public class DialogueBubble : MonoBehaviour
 	}
 
 	public void HideBubble() {
-		textBack.enabled = false;
-		textContainer.text = string.Empty;
-		isSpeaking = false;
+		if (isJudge) {
+			textBack.enabled = false;
+			textContainer.text = string.Empty;
+			isSpeaking = false;
+		} else {
+			GetComponent<Animator>().SetBool("Disappear", true);
+		}
+	}
+	public void OnBubbleEnd() {
+		Destroy(gameObject);
 	}
 
 	private int GetNumVisibleCharacters() {
