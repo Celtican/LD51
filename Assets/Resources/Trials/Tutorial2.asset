@@ -40,5 +40,5 @@ MonoBehaviour:
   dialogueOnInnocent: []
   dialogueOnGuilty: []
   showDocket: 1
-  docket: Hey Croody! Look at that! Your case information was right here all along!
+  docket: Hey Croody, look at that! Your case information was right here all along!
     Crazy, right?

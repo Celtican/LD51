@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
+  m_Name: Rick Raccoon v. Kerry Koala
+  m_EditorClassIdentifier: 
+  caseName: Rick Raccoon v. Kerry Koala
+  caseNumber: 0
+  defendantPrefab: {fileID: 2796485231300183252, guid: 0b0ae53a57764cb449de2140f4ea36f1,
+    type: 3}
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: 4dc4afbcff93c0b478ae35d2916f0352,
+    type: 3}
+  verdict: 0
+  dialogues:
+  - text: Your Honor, this young animal stole grapes from my garden!
+    actor: 1
+  - text: "I didn\u2019t steal them."
+    actor: 0
+  - text: They were already in your garbage.
+    actor: 0
+  - text: That makes it fair game!
+    actor: 0
+  - text: You were eating them right in the middle of my garden, you thief!
+    actor: 1
+  dialogueOnInnocent:
+  - text: Innocent!
+    actor: 2
+  - text: Haha I told you, finders keepers, lady!
+    actor: 0
+  - text: He did look cute eating those little grapes.
+    actor: 1
+  - text: I even got a cute video of it all.
+    actor: 1
+  - text: You what??? Give me that camera!
+    actor: 0
+  - text: Uh-uh. Finders keepers...
+    actor: 1
+  dialogueOnGuilty:
+  - text: GUILTY!
+    actor: 2
+  - text: Yeah, okay, so I was hungry. Sue me.
+    actor: 0
+  - text: "I mean, you did, but you didn\u2019t have to!"
+    actor: 0
+  - text: They were just a few grapes!
+    actor: 0
+  showDocket: 1
+  docket: 'Exhibit A:
+
+
+    Oooommmmmggggg! Cute little raccoon eating grapes!!
+
+    Look
+    at his cute little cheeks! Awwww...
+
+
+    Oh, um, what was I supposed to talk
+    about? Right, raccoon, grapes, theft, serious business.
+
+
+    The grapes were
+    found on the floor next to the trash bins. Suspect is telling the truth.'
