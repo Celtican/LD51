@@ -24,7 +24,7 @@ MonoBehaviour:
     actor: 1
   - text: of vandalizing a local pet shop.
     actor: 1
-  - text: You have no proof.
+  - text: Ugh. You have no proof.
     actor: 0
   - text: We caught you in the middle of writing
     actor: 1
@@ -49,6 +49,6 @@ MonoBehaviour:
   - text: and vandalizing public property definitely IS a crime.
     actor: 1
   showDocket: 1
-  docket: "Balsa County PD Police Report:\nSuspect was caught fleeing from the scene
-    of the crime.\r\nHer hands were stained with yellow ink.\r\nInk on suspect\u2019s
-    hands match the spray can found at the scene."
+  docket: "Balsa County PD Police Report:\n\n*Suspect was caught fleeing from the
+    scene of the crime.\r\n\n*Her hands were stained with yellow ink.\r\n\n*Ink samples
+    from suspect\u2019s hands matched the spray paint found at the scene."

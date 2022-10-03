@@ -45,7 +45,7 @@ MonoBehaviour:
     actor: 0
   - text: Did you hear that judge? She just confessed!
     actor: 1
-  - text: "He he, double jeopardy, dearie\u2026"
+  - text: "Heh heh, double jeopardy, dearie\u2026"
     actor: 0
   dialogueOnGuilty:
   - text: GUILTY!
@@ -65,7 +65,7 @@ MonoBehaviour:
   - text: for having such a foul mouth!
     actor: 0
   showDocket: 1
-  docket: "Balsa County PD Police Report Summary:\n\n*Victim\u2019s red car was in
-    the parking lot of Anderson\u2019s Grocery.\r\n\n*Car was loaded with bags of
-    green vegetables, several cans of prunes, and 2 bottles of prune juice.\r\n\n*Reading
+  docket: "Balsa County PD Police Report Summary:\n\n*Victim\u2019s red car was found
+    in the parking lot of Anderson\u2019s Grocery.\r\n\n*Car was loaded with bags
+    of green vegetables, several cans of prunes, and 2 bottles of prune juice.\r\n\n*Reading
     glasses found at the scene match the description of the suspect\u2019s spectacles.\r\n"
