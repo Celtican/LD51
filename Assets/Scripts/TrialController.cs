@@ -162,7 +162,10 @@ public class TrialController : MonoBehaviour
 	}
 
 	private void ExitActors() {
-		if (defendant != null) defendant.Exit();
+		if (defendant != null) {
+			defendant.Exit();
+			defendant.sprite.flipX = false;
+		}
 		if (plaintiff != null) plaintiff.Exit();
 		DialogueBubble[] bubbles = FindObjectsOfType<DialogueBubble>();
 		foreach (DialogueBubble bubble in bubbles) {
