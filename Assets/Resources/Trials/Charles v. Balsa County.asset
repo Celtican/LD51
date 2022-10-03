@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Charles v. Balsa County
   m_EditorClassIdentifier: 
   caseName: Charles v. Balsa County
+  caseNumber: 0
   defendantPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
     type: 3}
   plaintiffPrefab: {fileID: 1025971890835566800, guid: 340fc3539c22b2546a7ef38eec40482f,
     type: 3}
   isGuilty: 1
+  verdict: 1
   dialogues:
   - text: 'This cheetah was caught red-pawed running a red light! '
     actor: 1
@@ -44,6 +46,7 @@ MonoBehaviour:
   - text: But YOU'RE paying my dry cleaning bill if my suit gets 1 spot of dirt on
       it!
     actor: 0
+  showDocket: 1
   docket: 'Police Report from Balsa County PD:
 
     Suspect was caught at the intersection

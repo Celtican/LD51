@@ -10,7 +10,6 @@ public class Trial : ScriptableObject
 	public int caseNumber;
 	public GameObject defendantPrefab;
 	public GameObject plaintiffPrefab;
-	public bool isGuilty;
 	public Verdict verdict = Verdict.Innocent;
 	public Dialogue[] dialogues;
 	public Dialogue[] dialogueOnInnocent;

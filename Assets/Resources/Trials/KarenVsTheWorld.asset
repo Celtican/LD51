@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: KarenVsTheWorld
   m_EditorClassIdentifier: 
   caseName: Karen Vs The World (ala Tony Toucan)
+  caseNumber: 0
   defendantPrefab: {fileID: 1025971890835566800, guid: 340fc3539c22b2546a7ef38eec40482f,
     type: 3}
   plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
     type: 3}
   isGuilty: 1
+  verdict: 1
   dialogues:
   - text: This guy thinks he's so smooth. He swiped my wallet while I was looking
       right at him!
@@ -42,6 +44,7 @@ MonoBehaviour:
     actor: 0
   - text: You still owe me rent, Ms. Lizard! I won't forget!
     actor: 0
+  showDocket: 1
   docket: 'Witness Statement:
 
     "I saw Ms. Lizard talking to Mr. Turtle when grabbed

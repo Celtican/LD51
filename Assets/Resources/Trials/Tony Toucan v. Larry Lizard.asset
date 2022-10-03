@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Tony Toucan v. Larry Lizard
   m_EditorClassIdentifier: 
   caseName: Tony Toucan v. Larry Lizard
+  caseNumber: 0
   defendantPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
     type: 3}
   plaintiffPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
     type: 3}
   isGuilty: 1
+  verdict: 1
   dialogues:
   - text: 'Your Honor, I caught Tony Toucan trespassing on my property! '
     actor: 1
@@ -43,5 +45,6 @@ MonoBehaviour:
     actor: 1
   - text: "Also, can you please, um, discretely ispose of those photos\u2026.?"
     actor: 1
+  showDocket: 1
   docket: "Exhibit A:\nCensored for nude content. You don\u2019t want to see Larry
     Lizard this way, Judge. Trust us, we're doing you a favor."

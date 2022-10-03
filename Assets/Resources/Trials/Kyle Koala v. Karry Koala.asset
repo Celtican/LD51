@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Kyle Koala v. Karry Koala
   m_EditorClassIdentifier: 
   caseName: Kyle Koala v. Karry Koala
+  caseNumber: 0
   defendantPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
     type: 3}
   plaintiffPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
     type: 3}
   isGuilty: 1
+  verdict: 1
   dialogues:
   - text: I want this vulgar bear thrown in jail at once, Your Honor!
     actor: 1
@@ -42,6 +44,7 @@ MonoBehaviour:
     actor: 0
   - text: No, but it IS a crime to stalk a woman!
     actor: 1
+  showDocket: 1
   docket: "Police Report from Balsa County PD:\nSuspect was seen walking down the
     street humming a song about following some animal wherever he or she may go.
     It\u2019s unclear at the time if it was just an unfortunate coincidence, or if

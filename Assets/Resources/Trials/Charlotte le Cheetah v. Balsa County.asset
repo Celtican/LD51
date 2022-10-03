@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Charlotte le Cheetah v. Balsa County
   m_EditorClassIdentifier: 
   caseName: Charlotte le Cheetah v. Balsa County
+  caseNumber: 0
   defendantPrefab: {fileID: 0}
   plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
     type: 3}
   isGuilty: 1
+  verdict: 1
   dialogues:
   - text: I clocked this cheetah speeding down the highway at over 100 miles per
       hour.
@@ -34,4 +36,5 @@ MonoBehaviour:
     actor: 1
   - text: This seductress needs to learn her lesson.
     actor: 1
+  showDocket: 1
   docket: Not guilty, Your Honor.
