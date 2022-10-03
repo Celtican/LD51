@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
   m_Name: Charlotte le Cheetah v. Balsa County
   m_EditorClassIdentifier: 
-  caseName: Charlotte le Cheetah v. Balsa County
+  caseName: Balsa County v. Charlotte le Cheetah
   caseNumber: 0
   defendantPrefab: {fileID: 0}
   plaintiffPrefab: {fileID: 2796485231300183252, guid: 262a5c11f3101d4468340a65e504aa81,
@@ -42,21 +42,10 @@ MonoBehaviour:
   - text: This seductress needs to learn her lesson.
     actor: 1
   showDocket: 1
-  docket: 'Balsa County Police Report Summary:
-
-
-    *Police radar clocked the vehicle 
-    at 104 mph
-
-    *Ms. le Cheetah was pulled over by Officer Truie, who found she
-    had several recent tickets and suspended her license.
-
-    *The defendant was
-    furious declared her refusal to attend the trial, asking only that a letter be
-    delivered to the judge.
-
-
-    Note attached:
-
-
-    Not guilty, Your Honor. ;)'
+  docketSprite: {fileID: 21300000, guid: d1ad0744e474f1445ac08a2cffbd61a3, type: 3}
+  docket: "Charlotte is accused of speeding. Defendant is missing. \n\nBalsa County
+    Police Report Summary:\n\n*Police radar clocked the vehicle  at 104 mph\n*Ms.
+    le Cheetah was pulled over by Officer Truie, who found she had several recent
+    tickets and suspended her license.\n*The defendant was furious declared her refusal
+    to attend the trial, asking only that a letter be delivered to the judge.\n\nNote
+    from defendant attached:"

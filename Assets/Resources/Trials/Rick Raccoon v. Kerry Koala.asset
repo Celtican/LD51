@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
   m_Name: Rick Raccoon v. Kerry Koala
   m_EditorClassIdentifier: 
-  caseName: Rick Raccoon v. Kerry Koala
+  caseName: Kerry Koala v. Rick Raccoon
   caseNumber: 0
   defendantPrefab: {fileID: 2796485231300183252, guid: 0b0ae53a57764cb449de2140f4ea36f1,
     type: 3}
@@ -53,18 +53,23 @@ MonoBehaviour:
   - text: They were just a few grapes!
     actor: 0
   showDocket: 1
-  docket: 'Exhibit A:
+  docketSprite: {fileID: 0}
+  docket: 'Kerry Koala accuses Rick Raccoon of stealing grapes from Kerry''s garden.
+
+
+    Exhibit
+    A:
 
 
     Oooommmmmggggg! Cute little raccoon eating grapes!!
 
-    Look
-    at his cute little cheeks! Awwww...
+    Look at his
+    cute little cheeks! Awwww...
 
 
-    Oh, um, what was I supposed to talk
-    about? Right, raccoon, grapes, theft, serious business.
+    Oh, um, what was I supposed to talk about?
+    Right, raccoon, grapes, theft, serious business.
 
 
-    The grapes were
-    found on the floor next to and in the trash bins. '
+    The grapes were found
+    on the floor next to and in the trash bins. '

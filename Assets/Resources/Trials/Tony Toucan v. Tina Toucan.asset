@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
   m_Name: Tony Toucan v. Tina Toucan
   m_EditorClassIdentifier: 
-  caseName: Tony Toucan v. Tina Toucan
+  caseName: Tina Toucan v. Tony Toucan
   caseNumber: 0
   defendantPrefab: {fileID: 2796485231300183252, guid: e60e2027091731b42a8c31d6cf5f3a27,
     type: 3}
@@ -51,7 +51,8 @@ MonoBehaviour:
   - text: Eat that, Tony!
     actor: 1
   showDocket: 1
-  docket: "Rental Agreement:\nThis agreement is between home owner, Tony Toucan and
-    renter, Tina Toucan, for the rental of a room at 157 Balsa Wood Avenue.\r\nAmount:
-    300 jungle coins / month\nTo be paid: 1st of every month \n- NO EXCEPTIONS! \n(No,
-    Tina, not even for family!)"
+  docketSprite: {fileID: 0}
+  docket: "Tina Toucan accuses Tony Toucan of not respecting family.\n\nRental Agreement:\nThis
+    agreement is between home owner, Tony Toucan and renter, Tina Toucan, for the
+    rental of a room at 157 Balsa Wood Avenue.\r\nAmount: 300 jungle coins / month\nTo
+    be paid: 1st of every month \n- NO EXCEPTIONS! \n(No, Tina, not even for family!)"

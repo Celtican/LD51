@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
   m_Name: Kat v. Charlie Cheetah
   m_EditorClassIdentifier: 
-  caseName: Kat v. Charlie Cheetah
+  caseName: Charlie Cheetah v. Kat
   caseNumber: 0
   defendantPrefab: {fileID: 2796485231300183252, guid: 57886b877ad83cd44b33ac07173d7afb,
     type: 3}
@@ -49,15 +49,19 @@ MonoBehaviour:
   - text: Do you want to lose another jacket, pretty boy?
     actor: 0
   showDocket: 1
-  docket: 'Exhibit A:
+  docketSprite: {fileID: 0}
+  docket: 'Charlie Cheetah accuses Kat of assault.
 
 
-    Charles Cheetah''s jacket.
+    Exhibit A:
 
 
-    Large claw marks in
-    the leather indicate corroberate the victim''s story.
+    Charles
+    Cheetah''s jacket.
 
 
-    Claw marks are not
-    a conclusive match for the suspect.'
+    Large claw marks in the leather indicate corroberate
+    the victim''s story.
+
+
+    Claw marks are not a conclusive match for the suspect.'

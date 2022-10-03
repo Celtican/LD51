@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
   m_Name: Kat v. Balsa County
   m_EditorClassIdentifier: 
-  caseName: Katt v. Balsa County
+  caseName: Balsa County v. Katt
   caseNumber: 0
   defendantPrefab: {fileID: 2796485231300183252, guid: 57886b877ad83cd44b33ac07173d7afb,
     type: 3}
@@ -49,6 +49,8 @@ MonoBehaviour:
   - text: and vandalizing public property definitely IS a crime.
     actor: 1
   showDocket: 1
-  docket: "Balsa County PD Police Report:\n\n*Suspect was caught fleeing from the
-    scene of the crime.\r\n\n*Her hands were stained with yellow ink.\r\n\n*Ink samples
-    from suspect\u2019s hands matched the spray paint found at the scene."
+  docketSprite: {fileID: 0}
+  docket: "Kat is accused of vandilism.\n\nBalsa County PD Police Report:\n\n*Suspect
+    was caught fleeing from the scene of the crime.\r\n\n*Her hands were stained
+    with yellow ink.\r\n\n*Ink samples from suspect\u2019s hands matched the spray
+    paint found at the scene."

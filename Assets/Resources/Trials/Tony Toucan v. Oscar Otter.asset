@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
   m_Name: Tony Toucan v. Oscar Otter
   m_EditorClassIdentifier: 
-  caseName: Tony Toucan v. Oscar Otter
+  caseName: Oscar Otter v. Tony Toucan
   caseNumber: 0
   defendantPrefab: {fileID: 2796485231300183252, guid: e60e2027091731b42a8c31d6cf5f3a27,
     type: 3}
@@ -55,5 +55,7 @@ MonoBehaviour:
   - text: Mark my words!
     actor: 0
   showDocket: 1
-  docket: "Exhibit A:\nCensored for ....erm, innapropriate content. You don\u2019t
-    want to see Oscar Otter this way, Judge. Trust us, we're doing you a favor."
+  docketSprite: {fileID: 0}
+  docket: "Oscar Otter accuses Tony Toucan of trespassing.\n\nExhibit A:\nCensored
+    for ....erm, innapropriate content. You don\u2019t want to see Oscar Otter this
+    way, Judge. Trust us, we're doing you a favor."

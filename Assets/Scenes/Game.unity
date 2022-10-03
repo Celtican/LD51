@@ -2198,6 +2198,27 @@ PrefabInstance:
       propertyPath: m_paragraphSpacing
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5158873859639212543, guid: d6926a143f9457a4b872579aa3071a0e,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158873859639212543, guid: d6926a143f9457a4b872579aa3071a0e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158873859639212543, guid: d6926a143f9457a4b872579aa3071a0e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d1ad0744e474f1445ac08a2cffbd61a3,
+        type: 3}
+    - target: {fileID: 5158873859639212543, guid: d6926a143f9457a4b872579aa3071a0e,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6926a143f9457a4b872579aa3071a0e, type: 3}
 --- !u!114 &693082845 stripped

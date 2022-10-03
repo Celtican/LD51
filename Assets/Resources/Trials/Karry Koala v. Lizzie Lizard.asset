@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
   m_Name: Karry Koala v. Lizzie Lizard
   m_EditorClassIdentifier: 
-  caseName: Karry Koala v. Lizzie Lizard
+  caseName: Lizzie Lizard v. Karry Koala
   caseNumber: 0
   defendantPrefab: {fileID: 2796485231300183252, guid: 4dc4afbcff93c0b478ae35d2916f0352,
     type: 3}
@@ -65,7 +65,9 @@ MonoBehaviour:
   - text: for having such a foul mouth!
     actor: 0
   showDocket: 1
-  docket: "Balsa County PD Police Report Summary:\n\n*Victim\u2019s red car was found
-    in the parking lot of Anderson\u2019s Grocery.\r\n\n*Car was loaded with bags
-    of green vegetables, several cans of prunes, and 2 bottles of prune juice.\r\n\n*Reading
-    glasses found at the scene match the description of the suspect\u2019s spectacles.\r\n"
+  docketSprite: {fileID: 0}
+  docket: "Lizzie Lizard accuses Kerry Koala of grand theft auto.\n\nBalsa County
+    PD Police Report Summary:\n\n*Victim\u2019s red car was found in the parking
+    lot of Anderson\u2019s Grocery.\r\n\n*Car was loaded with bags of green vegetables,
+    several cans of prunes, and 2 bottles of prune juice.\r\n\n*Reading glasses found
+    at the scene match the description of the suspect\u2019s spectacles.\r\n"

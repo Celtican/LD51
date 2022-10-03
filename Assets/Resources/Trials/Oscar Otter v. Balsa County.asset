@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
   m_Name: Oscar Otter v. Balsa County
   m_EditorClassIdentifier: 
-  caseName: Oscar Otter v. Balsa County
+  caseName: Balsa County v. Oscar Otter
   caseNumber: 0
   defendantPrefab: {fileID: 2796485231300183252, guid: 21df2fe77d8a34d4099eafefd4df9e9f,
     type: 3}
@@ -69,5 +69,7 @@ MonoBehaviour:
       up!"
     actor: 1
   showDocket: 1
-  docket: "Business Report Summary:\n\nOscar\u2019s Waste Disposal Company\r\n\n5374
-    Magnolia Way, Magnolia Islands\r\n\r\nNet Worth 150 Million Jungle Coins"
+  docketSprite: {fileID: 0}
+  docket: "Oscar Otter is accused of money laundering.\n\nBusiness Report Summary:\n\nOscar\u2019s
+    Waste Disposal Company\r\n\n5374 Magnolia Way, Magnolia Islands\r\n\r\nNet Worth
+    150 Million Jungle Coins"

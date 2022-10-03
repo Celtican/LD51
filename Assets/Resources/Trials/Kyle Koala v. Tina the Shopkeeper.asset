@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
   m_Name: Kyle Koala v. Tina the Shopkeeper
   m_EditorClassIdentifier: 
-  caseName: Kyle Koala v. Tina the Shopkeeper
+  caseName: Tina Toucan v. Kyle Koala
   caseNumber: 0
   defendantPrefab: {fileID: 2796485231300183252, guid: 6820a10573e15f446968a21f79b25d89,
     type: 3}
@@ -49,11 +49,16 @@ MonoBehaviour:
   - text: I have children to feed! And they defintiely don't eat steak and sausages!
     actor: 0
   showDocket: 1
-  docket: 'List of Missing Items:
+  docketSprite: {fileID: 0}
+  docket: 'Tina Toucan accuses Kyle Koala of theft.
 
-    2 Prime Cut Caribou steaks
 
-    6 zebra sausage
-    links
+    List of Missing Items:
 
-    1 can Lightning Boar Soda'
+    2
+    Prime Cut Caribou steaks
+
+    6 zebra sausage links
+
+    1 can Lightning Boar
+    Soda'

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
   m_Name: Oscar Otter v. Rick Raccoon
   m_EditorClassIdentifier: 
-  caseName: Oscar Otter v. Rick Raccoon
+  caseName: Rick Raccoon v. Oscar Otter
   caseNumber: 0
   defendantPrefab: {fileID: 2796485231300183252, guid: 21df2fe77d8a34d4099eafefd4df9e9f,
     type: 3}
@@ -53,7 +53,8 @@ MonoBehaviour:
   - text: "Like I\u2019d buy anything from you again!"
     actor: 1
   showDocket: 1
-  docket: "Sales Receipt from Oscar\u2019s Autos:\r\n\n1 Purple Convertible, used
-    \u2013 70 Jungle Coins\n\r\nAll sales are non-refundable\n\n\n*Sales items may
-    or may not be in working condition. We are not responsible for defunct or dysfunctional
-    vehicles.*"
+  docketSprite: {fileID: 0}
+  docket: "Oscar Otter is accused of selling faulty cars.\n\nSales Receipt from Oscar\u2019s
+    Autos:\r\n\n1 Purple Convertible, used \u2013 70 Jungle Coins\n\r\nAll sales
+    are non-refundable\n\n\n*Sales items may or may not be in working condition.
+    We are not responsible for defunct or dysfunctional vehicles.*"

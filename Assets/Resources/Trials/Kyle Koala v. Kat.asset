@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
   m_Name: Kyle Koala v. Kat
   m_EditorClassIdentifier: 
-  caseName: Kyle Koala v. Kat
+  caseName: Kat v. Kyle Koala
   caseNumber: 0
   defendantPrefab: {fileID: 2796485231300183252, guid: 6820a10573e15f446968a21f79b25d89,
     type: 3}
@@ -45,13 +45,17 @@ MonoBehaviour:
   - text: No, but it IS a crime to stalk a woman!
     actor: 1
   showDocket: 1
-  docket: 'Balsa County Police Report Summary:
+  docketSprite: {fileID: 0}
+  docket: 'Kat accuses Kyle Koala of stalking.
 
-    *Witness saw the suspect walking
-    behind Ms. Kat
 
-    *He frequently ducked behind trash cans and into alleys whenever
-    she turned to look in his direction.
+    Balsa County Police Report Summary:
 
-    *He was also singing about following
-    her wherever she may go.'
+    *Witness
+    saw the suspect walking behind Ms. Kat
+
+    *He frequently ducked behind trash
+    cans and into alleys whenever she turned to look in his direction.
+
+    *He was
+    also singing about following her wherever she may go.'

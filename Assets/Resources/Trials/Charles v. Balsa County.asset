@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
   m_Name: Charles v. Balsa County
   m_EditorClassIdentifier: 
-  caseName: Charles v. Balsa County
+  caseName: Balsa County v. Charles
   caseNumber: 0
   defendantPrefab: {fileID: 2796485231300183252, guid: 24f9233681827d54c9800df4fdc802e1,
     type: 3}
@@ -51,26 +51,30 @@ MonoBehaviour:
     actor: 0
   showDocket: 1
   docketSprite: {fileID: 0}
-  docket: 'Balsa County Police Report Summary:
-
-    Charles Cheetah arrested on a
-    traffic violation
+  docket: 'Charles is accused of speeding through a red light.
 
 
-    *Suspect caught at the intersection after running into
-    a newly painted stop sign.
+    Balsa County
+    Police Report Summary:
 
+    Charles Cheetah arrested on a traffic violation
 
-    *Paint cans found nearby spilled onto the road.
 
     *Suspect
-    nearly ran over witness, Yertle Turtle.
+    caught at the intersection after running into a newly painted stop sign.
+
+
+    *Paint
+    cans found nearby spilled onto the road.
+
+    *Suspect nearly ran over witness,
+    Yertle Turtle.
 
     *Suspect tried to run from the scene.
 
 
-    *Witness
-    was flipped on his back, getting red paint on his shell.
+    *Witness was
+    flipped on his back, getting red paint on his shell.
 
     *Emergency services
     rushed to assist Mr. Turtle and get him back on his feet.

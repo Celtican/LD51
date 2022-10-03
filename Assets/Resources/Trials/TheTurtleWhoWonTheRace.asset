@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
   m_Name: TheTurtleWhoWonTheRace
   m_EditorClassIdentifier: 
-  caseName: The Turtle Who Won The Race
+  caseName: Lizzie Lizard v. Yertle Turtle
   caseNumber: 0
   defendantPrefab: {fileID: 1025971890835566800, guid: 49705cd9ac0b54d4c9609aed3356bc9d,
     type: 3}
@@ -47,10 +47,14 @@ MonoBehaviour:
   - text: Yeah, you're a turtle who scratched my new car!
     actor: 1
   showDocket: 1
-  docket: 'Balsa County Police Report Summary:
+  docketSprite: {fileID: 0}
+  docket: 'Lizzie Lizard accuses Yertle Turtle of scratching Lizzie''s car.
 
-    *Paint on suspect''s shell is
-    not a match for Ms. Lizard''s car.
 
-    *Suspect is a key witness in another
-    ongoing case.'
+    Balsa
+    County Police Report Summary:
+
+    *Paint on suspect''s shell is not a match
+    for Ms. Lizard''s car.
+
+    *Suspect is a key witness in another ongoing case.'

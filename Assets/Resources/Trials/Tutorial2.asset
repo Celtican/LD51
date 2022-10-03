@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
   m_Name: Tutorial2
   m_EditorClassIdentifier: 
-  caseName: Tutorial 2
+  caseName: Mouse over to view your docket
   caseNumber: 4
   defendantPrefab: {fileID: 0}
   plaintiffPrefab: {fileID: 2796485231300183252, guid: b644e281e77f88148be4d6f54112b1a4,
@@ -40,5 +40,6 @@ MonoBehaviour:
   dialogueOnInnocent: []
   dialogueOnGuilty: []
   showDocket: 1
+  docketSprite: {fileID: 0}
   docket: Hey Croody, look at that! Your case information was right here all along!
     Crazy, right?
