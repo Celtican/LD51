@@ -239,7 +239,7 @@ public class TrialController : MonoBehaviour
 		if (!canProsecute || prosecuted) return;
 		canProsecute = false;
 		if (trial.verdict == Trial.Verdict.Either || trial.verdict == Trial.Verdict.Innocent) {
-			if (timer.GetTimeLeft() > 0) bonusTimer.AddTime(4);
+			if (timer.GetTimeLeft() > 0) bonusTimer.AddTime(5);
 			numCorrect++;
 			print("Correct");
 		} else if (trial.verdict == Trial.Verdict.Guilty) {
@@ -255,7 +255,7 @@ public class TrialController : MonoBehaviour
 		if (!canProsecute || prosecuted) return;
 		canProsecute = false;
 		if (trial.verdict == Trial.Verdict.Either || trial.verdict == Trial.Verdict.Guilty) {
-			if (timer.GetTimeLeft() > 3) bonusTimer.AddTime(3);
+			if (timer.GetTimeLeft() > 0) bonusTimer.AddTime(5);
 			numCorrect++;
 			print("Correct");
 		} else if (trial.verdict == Trial.Verdict.Innocent) {

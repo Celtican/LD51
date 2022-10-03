@@ -9,6 +9,7 @@ public class Docket : MonoBehaviour
 	public TMP_Text title;
 	public TMP_Text body;
 	public bool obtain;
+	public AudioRandomizer liftSound;
 
 	private new Collider2D collider;
 	private Animator animator;
@@ -32,10 +33,15 @@ public class Docket : MonoBehaviour
 		animator.SetTrigger("Obtain");
 		this.title.text = title;
 		this.body.text = body;
+		PlayLiftSound();
 	}
 	public void Dispose() {
 		animator.SetTrigger("Dispose");
 		audio.RandomPlay();
+	}
+
+	public void PlayLiftSound() {
+		liftSound.RandomPlay();
 	}
 
 	private void OnDisable() {

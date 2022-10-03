@@ -12,6 +12,7 @@ public class TimerController : MonoBehaviour
 	public UnityEvent onTick;
 	public UnityEvent onTock;
 	public Animator hourglassAnimator;
+	public GameObject addedTimePrefab;
 
 	private TMP_Text textContainer;
 	private Animator animator;
@@ -71,10 +72,22 @@ public class TimerController : MonoBehaviour
 	public void AddTime(float time) {
 		curTime = Mathf.Clamp(curTime + time, 0, maxTime);
 		textContainer.text = Mathf.CeilToInt(curTime).ToString();
+		if (addedTimePrefab != null) {
+			GameObject addedTime = Instantiate(addedTimePrefab, transform.parent);
+			TMP_Text textContainer = addedTime.GetComponentInChildren<TMP_Text>();
+			if (time > 0) {
+				if (curTime < maxTime) {
+					textContainer.text = "+" + (int)time;
+					textContainer.color = Color.green;
+				}
+			} else {
+				textContainer.text = ((int)time).ToString();
+				textContainer.color = Color.red;
+			}
+		}
 	}
 
 	public void LoseTime(float time) {
-		curTime = Mathf.Clamp(curTime - time, 0, maxTime);
-		textContainer.text = Mathf.CeilToInt(curTime).ToString();
+		AddTime(-time);
 	}
 }
