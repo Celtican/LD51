@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
+  m_Name: Tutorial3
+  m_EditorClassIdentifier: 
+  caseName: Tutorial 3
+  caseNumber: 9
+  defendantPrefab: {fileID: 0}
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
+    type: 3}
+  isGuilty: 0
+  verdict: 3
+  dialogues:
+  - text: Hey, how's it goin'? I figured I'd stop by. Smell the roses.
+    actor: 1
+  - text: But sheesh, there sure ain't no roses here, bub.
+    actor: 1
+  - text: All I smell are stinkers. Cya, bub.
+    actor: 1
+  dialogueOnInnocent: []
+  dialogueOnGuilty: []
+  showDocket: 0
+  docket: 

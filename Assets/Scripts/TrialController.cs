@@ -20,7 +20,7 @@ public class TrialController : MonoBehaviour
 	public UnityEvent onEndDialogue;
 	public UnityEvent onWin;
 
-	private List<Trial> allTrials;
+	private List<Trial> trials;
 	private Trial trial;
 	private List<Dialogue> dialogues;
 	private DialogueBubble latestBubble;
@@ -30,25 +30,62 @@ public class TrialController : MonoBehaviour
 	private bool prosecuted = false;
 
 	private void Start() {
-		allTrials = new List<Trial>(Resources.LoadAll<Trial>("Trials"));
+		List<Trial> allTrials = new List<Trial>(Resources.LoadAll<Trial>("Trials"));
+		List<Trial> specificTrials = new List<Trial>();
+		for (int i = allTrials.Count-1; i >= 0; i--) {
+			if (allTrials[i].caseNumber > 0) {
+				for (int j = specificTrials.Count - 1; j >= 0; j--) {
+					if (specificTrials[j].caseNumber == allTrials[i].caseNumber) {
+						throw new Exception("Two trials have the same case number. Case numbers above 0 must be unique.");
+					}
+				}
+				print("Adding specific trial");
+				specificTrials.Add(allTrials[i]);
+				allTrials.RemoveAt(i);
+			} else if (allTrials[i].caseNumber < 0) {
+				allTrials.RemoveAt(i);
+			}
+		}
+		trials = new List<Trial>();
+		while (allTrials.Count > 0 || specificTrials.Count > 0) {
+			for (int i = specificTrials.Count - 1; i >= 0; i--) {
+				if (specificTrials[i].caseNumber == trials.Count+1) {
+					trials.Add(specificTrials[i]);
+					specificTrials.RemoveAt(i);
+				}
+			}
+			if (allTrials.Count > 0) {
+				int r = Random.Range(0, allTrials.Count);
+				trials.Add(allTrials[r]);
+				allTrials.RemoveAt(r);
+			}
+		}
+
+		foreach(Trial trial in trials) {
+			print(trial.caseName);
+		}
+
 		if (debugTrial != null) StartTrial(debugTrial);
-		else StartRandomTrial();
+		else StartNextTrial();
 	}
 
-	public void StartRandomTrial() {
+	public void StartNextTrial() {
 		if (ended) return;
-		if (allTrials.Count == 0) onWin.Invoke();
-		else StartTrial(allTrials[Random.Range(0, allTrials.Count)]);
+		if (trials.Count == 0) {
+			onWin.Invoke();
+			return;
+		}
+		StartTrial(trials[0]);
+		trials.RemoveAt(0);
 	}
 	public void StartTrial(Trial trial) {
 		if (ended) return;
 		onEndTrial.Invoke();
 		this.trial = trial;
 		prosecuted = false;
-		allTrials.Remove(trial);
 		InstantiateActors();
 		StartDialogues(trial.dialogues, false);
-		docket.SetDocket(trial.caseName, trial.docket);
+		if (trial.showDocket) docket.SetDocket(trial.caseName, trial.docket);
 	}
 	private void InstantiateActors() {
 		if (defendant != null) {
@@ -119,7 +156,7 @@ public class TrialController : MonoBehaviour
 			bubble.Speak(dialogue.text);
 		} else {
 			onEndDialogue.Invoke();
-			if (prosecuted) StartRandomTrial(); // the judge made their decision
+			if (prosecuted || trial.verdict == Trial.Verdict.NoJudgment) StartNextTrial();
 		}
 	}
 
