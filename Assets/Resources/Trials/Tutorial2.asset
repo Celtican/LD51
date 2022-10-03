@@ -25,13 +25,13 @@ MonoBehaviour:
     actor: 1
   - text: "It\u2019s the pile of papers next to you..."
     actor: 1
-  - text: that actually gives you more information about each case.
+  - text: ... that actually gives you more information about each case.
     actor: 1
   - text: "Might help you decide who\u2019s ACTUALLY guilty or innocent."
     actor: 1
-  - text: Just wave your mouse over it, and like magic,
+  - text: Just wave your mouse over it, and like magic...
     actor: 1
-  - text: "you\u2019ll pick it up and you can actually read it!"
+  - text: "... you\u2019ll pick it up and you can actually read it!"
     actor: 1
   - text: Or don't read it. It's no skin off my back.
     actor: 1

@@ -19,13 +19,10 @@ MonoBehaviour:
     type: 3}
   verdict: 1
   dialogues:
-  - text: I clocked this cheetah speeding down the highway
+  - text: I clocked this cheetah speeding down the highway, record speeds.
     actor: 1
-  - text: at over 100 miles per hour.
-    actor: 1
-  - text: "She\u2019s refused to show up at court"
-    actor: 1
-  - text: and only sent this note to you, Your Honor.
+  - text: "She\u2019s hasn't shown up at court and only sent this note to you, Your
+      Honor."
     actor: 1
   dialogueOnInnocent:
   - text: Innocent!

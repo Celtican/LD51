@@ -21,37 +21,28 @@ MonoBehaviour:
   dialogues:
   - text: "Croody! What have you been doing \u2013 sleeping on the bench?"
     actor: 1
-  - text: Your case load is piling up,
+  - text: Your case load is piling up, and you're running out of time!
     actor: 1
-  - text: and you're only getting more cases!
+  - text: You wantyour gavel? You're going to have to speed through these.
     actor: 1
-  - text: To even have a chance to hang onto your gavel,
+  - text: "We\u2019ve done the math, and that gives you only 10 seconds on each case."
     actor: 1
-  - text: "you\u2019re going to have to speed run through these cases"
+  - text: You're going to have to do a damn good job and...
     actor: 1
-  - text: and do a damn good job of it.
+  - text: Hey, are you even listening to me?
     actor: 1
-  - text: "We\u2019ve done the math, and that gives you only 10 seconds"
-    actor: 1
-  - text: to review each case and decide if the defendant is innocent or guilty.
-    actor: 1
-  - text: Now, to make sure you understand me,
-    actor: 1
-  - text: you need to bang your gavel
-    actor: 1
-  - text: on either the 'guilty' or 'innocent' button.
-    actor: 1
-  - text: Whenever you're ready, Judge Croody.
+  - text: Bang your gavel around so I at least know you're awake.
     actor: 1
   dialogueOnInnocent:
   - text: Innocent!
     actor: 2
-  - text: Yeah, just like that!
+  - text: That's the spirit.
     actor: 1
   dialogueOnGuilty:
   - text: GUILTY!
     actor: 2
-  - text: Yeah, just like that!
+  - text: That's the spirit.
     actor: 1
   showDocket: 0
+  docketSprite: {fileID: 0}
   docket: 

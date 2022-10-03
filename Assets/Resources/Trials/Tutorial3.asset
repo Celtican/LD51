@@ -31,21 +31,18 @@ MonoBehaviour:
     actor: 1
   - text: "But we\u2019ve given you a little bonus charger next to it."
     actor: 1
-  - text: If you finish your cases early,
-    actor: 1
-  - text: the remaining time from the case gets added to this little buffer here.
+  - text: If you finish your cases early, get get some extra time.
     actor: 1
   - text: But only if you choose the right verdict.
     actor: 1
-  - text: If not, well, that time will be subtracted from your buffer.
+  - text: If not, well, that's less time for you, bub.
     actor: 1
-  - text: "Thought it\u2019d give you some incentive to read your cases"
+  - text: Consider it an incentive to do the right thing.
     actor: 1
-  - text: and do the right thing.
-    actor: 1
-  - text: Or not. What do I care.
+  - text: Or don't. What do I care.
     actor: 1
   dialogueOnInnocent: []
   dialogueOnGuilty: []
   showDocket: 0
+  docketSprite: {fileID: 0}
   docket: 

@@ -22,13 +22,9 @@ MonoBehaviour:
   dialogues:
   - text: 'This cheetah was caught red-pawed running a stop sign! '
     actor: 1
-  - text: I'm innocent, Your Honor.
+  - text: I'm innocent, Your Honor. I didn't do it!
     actor: 0
-  - text: I didn't do it!
-    actor: 0
-  - text: Check his paws, Your Honor.
-    actor: 1
-  - text: The proof is in the ink!
+  - text: Check his paws, Your Honor. The proof is in the ink!
     actor: 1
   dialogueOnInnocent:
   - text: Innocent!

@@ -21,9 +21,7 @@ MonoBehaviour:
   dialogues:
   - text: Hey, nice job, Judge-y!
     actor: 1
-  - text: You finished all of your cases
-    actor: 1
-  - text: and you actually did a pretty good job of it!
+  - text: So you actually finished your cases, and did a good job!
     actor: 1
   - text: "I honestly didn\u2019t think you could do it."
     actor: 1
@@ -36,4 +34,5 @@ MonoBehaviour:
   dialogueOnInnocent: []
   dialogueOnGuilty: []
   showDocket: 0
+  docketSprite: {fileID: 0}
   docket: 
