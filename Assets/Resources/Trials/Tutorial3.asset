@@ -33,11 +33,11 @@ MonoBehaviour:
     actor: 1
   - text: If you finish your cases early,
     actor: 1
-  - text: the remaining time from the case gets added to this little charger here.
+  - text: the remaining time from the case gets added to this little buffer here.
     actor: 1
   - text: But only if you choose the right verdict.
     actor: 1
-  - text: If not, well, that time will be subtracted from your charger.
+  - text: If not, well, that time will be subtracted from your buffer.
     actor: 1
   - text: "Thought it\u2019d give you some incentive to read your cases"
     actor: 1

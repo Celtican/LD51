@@ -22,7 +22,7 @@ MonoBehaviour:
   dialogues:
   - text: 'Your Honor, I caught Tony Toucan trespassing on my property! '
     actor: 1
-  - text: You can't prove nothing, you low life otter.
+  - text: You can't prove nothin', you low-life otter.
     actor: 0
   - text: I caught your feathered behind myself!
     actor: 1

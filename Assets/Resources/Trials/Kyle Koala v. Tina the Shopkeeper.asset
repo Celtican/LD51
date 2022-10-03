@@ -44,7 +44,7 @@ MonoBehaviour:
     actor: 2
   - text: Ha! Off to prison with you, thief!
     actor: 1
-  - text: "What? No, but I can\u2019t go to prison!"
+  - text: "What? No, I can\u2019t go to prison!"
     actor: 0
   - text: I have children to feed! And they defintiely don't eat steak and sausages!
     actor: 0

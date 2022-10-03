@@ -26,7 +26,7 @@ MonoBehaviour:
     actor: 1
   - text: Nah, Lizzie, you got me all wrong. I ain't no thief.
     actor: 0
-  - text: Right, then how do you explain how my wallet ended up in your pocket?
+  - text: Right, then how do you explain my wallet ending up in your pocket?
     actor: 1
   - text: What? You owed me rent. I'm just takin' what's mine.
     actor: 0

@@ -39,7 +39,7 @@ MonoBehaviour:
     actor: 1
   - text: I even got a cute video of it all.
     actor: 1
-  - text: You what??? Give me that camera!
+  - text: "You\u2014what??? Give me that camera!"
     actor: 0
   - text: Uh-uh. Finders keepers...
     actor: 1
@@ -48,7 +48,7 @@ MonoBehaviour:
     actor: 2
   - text: Yeah, okay, so I was hungry. Sue me.
     actor: 0
-  - text: "I mean, you did, but you didn\u2019t have to!"
+  - text: "I mean, you did sue me, but you didn\u2019t have to!"
     actor: 0
   - text: They were just a few grapes!
     actor: 0
@@ -67,4 +67,4 @@ MonoBehaviour:
 
 
     The grapes were
-    found on the floor next to the trash bins. Suspect is telling the truth.'
+    found on the floor next to and in the trash bins. '

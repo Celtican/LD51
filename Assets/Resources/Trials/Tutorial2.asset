@@ -23,7 +23,7 @@ MonoBehaviour:
     actor: 1
   - text: "What\u2019s that, you ask?"
     actor: 1
-  - text: "t\u2019s the pile of papers next to you"
+  - text: "It\u2019s the pile of papers next to you..."
     actor: 1
   - text: that actually gives you more information about each case.
     actor: 1

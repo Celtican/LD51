@@ -46,8 +46,8 @@ MonoBehaviour:
     actor: 1
   - text: Fine!
     actor: 0
-  - text: But YOU'RE paying my dry cleaning bill if my suit gets 1 spot of dirt on
-      it!
+  - text: But YOU'RE paying my dry cleaning bill if my clothes get ONE spot of dirt
+      on them!
     actor: 0
   showDocket: 1
   docket: 'Balsa County Police Report Summary:
@@ -56,11 +56,11 @@ MonoBehaviour:
     traffic violation
 
 
-    *Suspect caught at the intersection after run into a
-    newly painted stop sign.
+    *Suspect caught at the intersection after running into
+    a newly painted stop sign.
 
 
-    *Paint cans nearby spilled onto the road.
+    *Paint cans found nearby spilled onto the road.
 
     *Suspect
     nearly ran over witness, Yertle Turtle.

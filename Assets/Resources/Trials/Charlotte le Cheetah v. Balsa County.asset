@@ -42,4 +42,21 @@ MonoBehaviour:
   - text: This seductress needs to learn her lesson.
     actor: 1
   showDocket: 1
-  docket: Not guilty, Your Honor.
+  docket: 'Balsa County Police Report Summary:
+
+
+    *Police radar clocked the vehicle 
+    at 104 mph
+
+    *Ms. le Cheetah was pulled over by Officer Truie, who found she
+    had several recent tickets and suspended her license.
+
+    *The defendant was
+    furious declared her refusal to attend the trial, asking only that a letter be
+    delivered to the judge.
+
+
+    Note attached:
+
+
+    Not guilty, Your Honor. ;)'

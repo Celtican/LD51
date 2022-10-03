@@ -20,7 +20,7 @@ MonoBehaviour:
     type: 3}
   verdict: 1
   dialogues:
-  - text: I want this perve thrown in jail at once, Your Honor!
+  - text: I want this perv thrown in jail at once, Your Honor!
     actor: 1
   - text: He was stalking me, and singing a song about how he will follow me!
     actor: 1
@@ -31,7 +31,7 @@ MonoBehaviour:
   dialogueOnInnocent:
   - text: Innocent!
     actor: 2
-  - text: Whatever. Stay away from me, you perve!
+  - text: Whatever. Stay away from me, you perv!
     actor: 1
   - text: "Serves you all right for sticking your nose in a koala\u2019s business!"
     actor: 0
