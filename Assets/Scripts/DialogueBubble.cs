@@ -38,7 +38,6 @@ public class DialogueBubble : MonoBehaviour
 					complete = true;
 					onTextFilled.Invoke();
 				} else if (complete && timeSinceStart - (1 / charactersPerSecond * targetText.Length) > timeDelayAfterTextComplete*2) {
-					print("Dialogue ended! " + textContainer.text);
 					if (isJudge) HideBubble();
 					isSpeaking = false;
 					if (!interrupted) onDialogueComplete.Invoke();
