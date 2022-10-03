@@ -7,7 +7,10 @@ using Random = UnityEngine.Random;
 
 public class TrialController : MonoBehaviour
 {
+	public TimerController timer;
+	public TimerController bonusTimer;
 	public Docket docket;
+	public Gavel gavel;
 	public GameObject bubbleContainer;
 	public GameObject plaintiffBubblePrefab;
 	public GameObject defendantBubblePrefab;
@@ -19,6 +22,7 @@ public class TrialController : MonoBehaviour
 	public UnityEvent onNewTrial;
 	public UnityEvent onEndTrial;
 	public UnityEvent onEndDialogue;
+	public UnityEvent onLose;
 	public UnityEvent onWin;
 
 	private List<Trial> trials;
@@ -28,7 +32,9 @@ public class TrialController : MonoBehaviour
 	private Actor defendant;
 	private Actor plaintiff;
 	private bool ended = false;
+	private bool canProsecute = false;
 	private bool prosecuted = false;
+
 
 	private void Start() {
 		List<Trial> allTrials = new List<Trial>(Resources.LoadAll<Trial>("Trials"));
@@ -63,6 +69,17 @@ public class TrialController : MonoBehaviour
 
 		if (debugTrial != null) StartTrial(debugTrial);
 		else StartNextTrial();
+
+		onNewTrial.AddListener(() => {
+			if (trial.verdict != Trial.Verdict.NoJudgment && trial.caseNumber != 1) {
+				timer.RestartTimer();
+			}
+			if (trial.verdict != Trial.Verdict.NoJudgment) canProsecute = true;
+		});
+	}
+
+	private void Update() {
+		print(canProsecute);
 	}
 
 	public void StartNextTrial() {
@@ -181,24 +198,46 @@ public class TrialController : MonoBehaviour
 			}
 		} else {
 			onEndDialogue.Invoke();
-			if (prosecuted || trial.verdict == Trial.Verdict.NoJudgment) StartNextTrial();
+			if (bonusTimer.GetTimeLeft() <= 0) {
+				onLose.Invoke();
+			} else if (prosecuted || trial.verdict == Trial.Verdict.NoJudgment) StartNextTrial();
 		}
 	}
 
+	private void StopTimers() {
+		timer.enabled = false;
+		bonusTimer.enabled = false;
+	}
+
 	public void ChooseInnocent() {
-		if (prosecuted) return;
-		prosecuted = true;
-		InterruptSpeaking();
-		docket.Dispose();
+		if (!canProsecute || prosecuted) return;
+		canProsecute = false;
+		if ((trial.verdict == Trial.Verdict.Either || trial.verdict == Trial.Verdict.Innocent) && timer.GetTimeLeft() > 3) {
+			bonusTimer.AddTime(3);
+		} else if (trial.verdict == Trial.Verdict.Guilty) {
+			bonusTimer.LoseTime(3);
+		}
+		Choose();
 		StartDialogues(trial.dialogueOnInnocent, true);
 	}
 
 	public void ChooseGuilty() {
-		if (prosecuted) return;
+		if (!canProsecute || prosecuted) return;
+		canProsecute = false;
+		if ((trial.verdict == Trial.Verdict.Either || trial.verdict == Trial.Verdict.Guilty) && timer.GetTimeLeft() > 3) {
+			bonusTimer.AddTime(3);
+		} else if (trial.verdict == Trial.Verdict.Innocent) {
+			bonusTimer.LoseTime(3);
+		}
+		Choose();
+		StartDialogues(trial.dialogueOnGuilty, true);
+	}
+
+	private void Choose() {
 		prosecuted = true;
 		InterruptSpeaking();
+		StopTimers();
 		docket.Dispose();
-		StartDialogues(trial.dialogueOnGuilty, true);
 	}
 
 	public void EndDialogue() {
