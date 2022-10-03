@@ -13,18 +13,37 @@ MonoBehaviour:
   m_Name: Tutorial3
   m_EditorClassIdentifier: 
   caseName: Tutorial 3
-  caseNumber: 9
+  caseNumber: 7
   defendantPrefab: {fileID: 0}
-  plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
+  plaintiffPrefab: {fileID: 7095990830972950494, guid: 697ac9a1093828a4191f48545e760d8a,
     type: 3}
-  isGuilty: 0
   verdict: 3
   dialogues:
-  - text: Hey, how's it goin'? I figured I'd stop by. Smell the roses.
+  - text: Hey Croody, did you ever get the feeling you were being watched?
     actor: 1
-  - text: But sheesh, there sure ain't no roses here, bub.
+  - text: "Well, you\u2019re not, don\u2019t worry."
     actor: 1
-  - text: All I smell are stinkers. Cya, bub.
+  - text: But, as you know by now, you are being timed.
+    actor: 1
+  - text: See that hour glass in the upper right corner of your screen?
+    actor: 1
+  - text: "If that timer runs out, you\u2019re toast."
+    actor: 1
+  - text: "But we\u2019ve given you a little bonus charger next to it."
+    actor: 1
+  - text: If you finish your cases early,
+    actor: 1
+  - text: the remaining time from the case gets added to this little charger here.
+    actor: 1
+  - text: But only if you choose the right verdict.
+    actor: 1
+  - text: If not, well, that time will be subtracted from your charger.
+    actor: 1
+  - text: "Thought it\u2019d give you some incentive to read your cases"
+    actor: 1
+  - text: and do the right thing.
+    actor: 1
+  - text: Or not. What do I care.
     actor: 1
   dialogueOnInnocent: []
   dialogueOnGuilty: []
