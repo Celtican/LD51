@@ -47,9 +47,6 @@ MonoBehaviour:
   - text: Haha! You deserve this!
     actor: 1
   showDocket: 1
-  docket: 'Witness Statement:
-
-    "I saw Mr. Turtle deliberately walk across Ms.
-    Lizard''s lawn. It was a bit rude, since she has a sign that very clearly says
-    ''KEEP OFF THE GRASS,'' but to be fair, I didn''t see a sidewalk on that side
-    of the street..."'
+  docket: "Summary of Witness Statement:\n*Witness saw the suspect walk on Ms. Lizard\u2019s
+    lawn.\r\n*Keep off Grass Sign was clearly visible.\r\n*Sidewalk does end before
+    Ms. Lizard\u2019s house.\r\n*Suspect had nowhere else to walk."
