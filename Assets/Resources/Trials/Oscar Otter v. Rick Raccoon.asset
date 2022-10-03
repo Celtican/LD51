@@ -54,6 +54,6 @@ MonoBehaviour:
     actor: 1
   showDocket: 1
   docket: "Sales Receipt from Oscar\u2019s Autos:\r\n\n1 Purple Convertible, used
-    \u2013 70 Jungle Coins\n\r\nAll sales purchases are non-refundable\n\n\n*Sales
-    items may not be in working condition. We are not responsible for defunct or
-    dysfunctional vehicles.*"
+    \u2013 70 Jungle Coins\n\r\nAll sales are non-refundable\n\n\n*Sales items may
+    or may not be in working condition. We are not responsible for defunct or dysfunctional
+    vehicles.*"
