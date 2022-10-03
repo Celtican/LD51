@@ -7,6 +7,9 @@ using Random = UnityEngine.Random;
 
 public class TrialController : MonoBehaviour
 {
+	public Trial goodEnding;
+	public Trial badEnding;
+	[Range(0f, 1f)] public float percentNeededForGoodEnding = 0.8f;
 	public TimerController timer;
 	public TimerController bonusTimer;
 	public Docket docket;
@@ -23,7 +26,8 @@ public class TrialController : MonoBehaviour
 	public UnityEvent onEndTrial;
 	public UnityEvent onEndDialogue;
 	public UnityEvent onLose;
-	public UnityEvent onWin;
+	public UnityEvent onWinGood;
+	public UnityEvent onWinBad;
 
 	private List<Trial> trials;
 	private Trial trial;
@@ -34,7 +38,9 @@ public class TrialController : MonoBehaviour
 	private bool ended = false;
 	private bool canProsecute = false;
 	private bool prosecuted = false;
-
+	private int numCorrect;
+	private int numIncorrect;
+	private bool shownEndTrial;
 
 	private void Start() {
 		List<Trial> allTrials = new List<Trial>(Resources.LoadAll<Trial>("Trials"));
@@ -78,18 +84,25 @@ public class TrialController : MonoBehaviour
 		});
 	}
 
-	private void Update() {
-		print(canProsecute);
-	}
-
 	public void StartNextTrial() {
 		if (ended) return;
 		if (trials.Count == 0) {
-			onWin.Invoke();
-			return;
+			float percent = ((float)numCorrect) / (numCorrect + numIncorrect);
+			bool isGoodEnding = percent > percentNeededForGoodEnding;
+			print("Correct: " + numCorrect + "/" + (numCorrect+numIncorrect));
+			print("Good ending: " + isGoodEnding);
+			if (shownEndTrial) {
+				if (isGoodEnding) onWinGood.Invoke();
+				else onWinBad.Invoke();
+			} else {
+				shownEndTrial = true;
+				if (isGoodEnding) StartTrial(goodEnding);
+				else StartTrial(badEnding);
+			}
+		} else {
+			StartTrial(trials[0]);
+			trials.RemoveAt(0);
 		}
-		StartTrial(trials[0]);
-		trials.RemoveAt(0);
 	}
 	public void StartTrial(Trial trial) {
 		if (ended) return;
@@ -166,6 +179,10 @@ public class TrialController : MonoBehaviour
 		if (start) NextDialogue();
 	}
 
+	public void InvokeLose() {
+		onLose.Invoke();
+	}
+
 	public void NextDialogue() {
 		if (plaintiff != null) plaintiff.StopTalking();
 		if (defendant != null) defendant.StopTalking();
@@ -200,7 +217,13 @@ public class TrialController : MonoBehaviour
 			onEndDialogue.Invoke();
 			if (bonusTimer.GetTimeLeft() <= 0) {
 				onLose.Invoke();
-			} else if (prosecuted || trial.verdict == Trial.Verdict.NoJudgment) StartNextTrial();
+			} else if (prosecuted || trial.verdict == Trial.Verdict.NoJudgment) {
+				if (trial.verdict == Trial.Verdict.NoJudgment && trial.showDocket) {
+					docket.Dispose();
+					print("Dispose special case");
+				}
+				StartNextTrial();
+			}
 		}
 	}
 
@@ -212,10 +235,14 @@ public class TrialController : MonoBehaviour
 	public void ChooseInnocent() {
 		if (!canProsecute || prosecuted) return;
 		canProsecute = false;
-		if ((trial.verdict == Trial.Verdict.Either || trial.verdict == Trial.Verdict.Innocent) && timer.GetTimeLeft() > 3) {
-			bonusTimer.AddTime(3);
+		if (trial.verdict == Trial.Verdict.Either || trial.verdict == Trial.Verdict.Innocent) {
+			if (timer.GetTimeLeft() > 0) bonusTimer.AddTime(4);
+			numCorrect++;
+			print("Correct");
 		} else if (trial.verdict == Trial.Verdict.Guilty) {
 			bonusTimer.LoseTime(3);
+			numIncorrect++;
+			print("Incorrect");
 		}
 		Choose();
 		StartDialogues(trial.dialogueOnInnocent, true);
@@ -224,10 +251,14 @@ public class TrialController : MonoBehaviour
 	public void ChooseGuilty() {
 		if (!canProsecute || prosecuted) return;
 		canProsecute = false;
-		if ((trial.verdict == Trial.Verdict.Either || trial.verdict == Trial.Verdict.Guilty) && timer.GetTimeLeft() > 3) {
-			bonusTimer.AddTime(3);
+		if (trial.verdict == Trial.Verdict.Either || trial.verdict == Trial.Verdict.Guilty) {
+			if (timer.GetTimeLeft() > 3) bonusTimer.AddTime(3);
+			numCorrect++;
+			print("Correct");
 		} else if (trial.verdict == Trial.Verdict.Innocent) {
 			bonusTimer.LoseTime(3);
+			numIncorrect++;
+			print("Incorrect");
 		}
 		Choose();
 		StartDialogues(trial.dialogueOnGuilty, true);

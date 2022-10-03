@@ -15,7 +15,7 @@ MonoBehaviour:
   caseName: Good Ending
   caseNumber: -1
   defendantPrefab: {fileID: 0}
-  plaintiffPrefab: {fileID: 2796485231300183252, guid: 262a5c11f3101d4468340a65e504aa81,
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: 4c0890007cbd7124486670d2896f3c21,
     type: 3}
   verdict: 3
   dialogues:

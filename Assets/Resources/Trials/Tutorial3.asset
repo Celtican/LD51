@@ -15,7 +15,7 @@ MonoBehaviour:
   caseName: Tutorial 3
   caseNumber: 7
   defendantPrefab: {fileID: 0}
-  plaintiffPrefab: {fileID: 7095990830972950494, guid: 697ac9a1093828a4191f48545e760d8a,
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: b644e281e77f88148be4d6f54112b1a4,
     type: 3}
   verdict: 3
   dialogues:
