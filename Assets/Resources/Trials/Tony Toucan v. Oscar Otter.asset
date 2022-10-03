@@ -55,7 +55,7 @@ MonoBehaviour:
   - text: Mark my words!
     actor: 0
   showDocket: 1
-  docketSprite: {fileID: 0}
+  docketSprite: {fileID: 21300000, guid: 29e23d1d79438dd43a2b5adad008138d, type: 3}
   docket: "Oscar Otter accuses Tony Toucan of trespassing.\n\nExhibit A:\nCensored
-    for ....erm, innapropriate content. You don\u2019t want to see Oscar Otter this
+    for.... erm, innapropriate content. You don\u2019t want to see Oscar Otter this
     way, Judge. Trust us, we're doing you a favor."
