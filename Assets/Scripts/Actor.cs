@@ -10,6 +10,7 @@ public class Actor : MonoBehaviour
 	public UnityEvent onReady;
 	public UnityEvent onExit;
 	public AudioClip themeSong;
+	public AudioRandomizer footsteps;
 
 	private AudioClip previousSong;
 	private Animator animator;
@@ -43,6 +44,10 @@ public class Actor : MonoBehaviour
 			music.clip = previousSong;
 			music.Play();
 		}
+	}
+
+	public void PlayFootstep() {
+		footsteps.RandomPlay();
 	}
 
 	public void StartTalking() {
