@@ -15,16 +15,17 @@ MonoBehaviour:
   caseName: Charlotte le Cheetah v. Balsa County
   caseNumber: 0
   defendantPrefab: {fileID: 0}
-  plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: 262a5c11f3101d4468340a65e504aa81,
     type: 3}
-  isGuilty: 1
   verdict: 1
   dialogues:
-  - text: I clocked this cheetah speeding down the highway at over 100 miles per
-      hour.
+  - text: I clocked this cheetah speeding down the highway
     actor: 1
-  - text: "She\u2019s refused to show up at court, and only sent this note to you,
-      Your Honor."
+  - text: at over 100 miles per hour.
+    actor: 1
+  - text: "She\u2019s refused to show up at court"
+    actor: 1
+  - text: and only sent this note to you, Your Honor.
     actor: 1
   dialogueOnInnocent:
   - text: "Don\u2019t give in to her seduction, Your Honor!"
