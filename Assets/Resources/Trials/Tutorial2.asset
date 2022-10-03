@@ -13,20 +13,32 @@ MonoBehaviour:
   m_Name: Tutorial2
   m_EditorClassIdentifier: 
   caseName: Tutorial 2
-  caseNumber: 5
+  caseNumber: 4
   defendantPrefab: {fileID: 0}
-  plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: 262a5c11f3101d4468340a65e504aa81,
     type: 3}
-  isGuilty: 0
   verdict: 3
   dialogues:
-  - text: Yeah, I'm STILL the tutorial guy. Still no tutorial for you.
+  - text: Hey Judge-y! Have you been looking at the docket?
     actor: 1
-  - text: Heh, you're gonna have ta ask nicely...
+  - text: "What\u2019s that, you ask?"
     actor: 1
-  - text: ... with your wallet. Three thousand jungle coins augh to do, ey?
+  - text: "t\u2019s the pile of papers next to you"
+    actor: 1
+  - text: that actually gives you more information about each case.
+    actor: 1
+  - text: "Might help you decide who\u2019s ACTUALLY guilty or innocent."
+    actor: 1
+  - text: Just wave your mouse over it, and like magic,
+    actor: 1
+  - text: "you\u2019ll pick it up and you can actually read it!"
+    actor: 1
+  - text: Or don't read it. It's no skin off my back.
+    actor: 1
+  - text: I told you what to do, so my conscience is clear.
     actor: 1
   dialogueOnInnocent: []
   dialogueOnGuilty: []
-  showDocket: 0
-  docket: 
+  showDocket: 1
+  docket: Hey Croody! Look at that! Your case information was right here all along!
+    Crazy, right?
