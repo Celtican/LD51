@@ -31,7 +31,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 523259bc955ba5a4182f422e24a24285,
+      objectReference: {fileID: 21300000, guid: b4218e8dbef0360499cf386f549c93db,
         type: 3}
     - target: {fileID: 4188067173898003175, guid: 697ac9a1093828a4191f48545e760d8a,
         type: 3}
@@ -41,7 +41,7 @@ PrefabInstance:
     - target: {fileID: 7095990830972950494, guid: 697ac9a1093828a4191f48545e760d8a,
         type: 3}
       propertyPath: m_Name
-      value: Lizzie
+      value: Tina
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 697ac9a1093828a4191f48545e760d8a, type: 3}
