@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using static UnityEngine.ParticleSystem;
 
 public class Gavel : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Gavel : MonoBehaviour
     public float highestAngle = -26;
     private float defaultAngle;
 
+    public ParticleSystem wackParticles;
     public float maximumWackHeight = -3;
     public float wackTime = 0.2f;
     public float wackHeight = 0.5f;
@@ -80,6 +82,9 @@ public class Gavel : MonoBehaviour
     private void Wack() {
 		loweredTime = 0;
 		onWack.Invoke();
+        ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams();
+        emitParams.position = loweredHeadPosition;
+        wackParticles.Emit(emitParams, 1);
 		if (innocent != null && innocent.OverlapPoint(loweredHeadPosition)) {
 			onHitInnocent.Invoke();
 		} else if (guilty != null && guilty.OverlapPoint(loweredHeadPosition)) {
