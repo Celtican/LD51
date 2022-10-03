@@ -35,6 +35,8 @@ MonoBehaviour:
   - text: And now you'll pay the ultimate price! I demand you book him, Judge!
     actor: 1
   dialogueOnInnocent:
+  - text: Innocent!
+    actor: 2
   - text: Huh? But he did walk across my lawn!
     actor: 1
   - text: I gave you a witness statement to prove it!
@@ -42,6 +44,8 @@ MonoBehaviour:
   - text: That's not illegal though...
     actor: 0
   dialogueOnGuilty:
+  - text: GUILTY!
+    actor: 2
   - text: But there wasn't even a sidewalk to walk on...
     actor: 0
   - text: Haha! You deserve this!

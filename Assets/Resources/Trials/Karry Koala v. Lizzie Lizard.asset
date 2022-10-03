@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45805872401f37a4388a34ee9a0a05c1, type: 3}
+  m_Name: Karry Koala v. Lizzie Lizard
+  m_EditorClassIdentifier: 
+  caseName: Karry Koala v. Lizzie Lizard
+  caseNumber: 0
+  defendantPrefab: {fileID: 2796485231300183252, guid: 4dc4afbcff93c0b478ae35d2916f0352,
+    type: 3}
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
+    type: 3}
+  verdict: 1
+  dialogues:
+  - text: I demand this animal go to prison for life for stealing my car!
+    actor: 1
+  - text: Well, I never! You dare accuse an old koala of stealing?
+    actor: 0
+  - text: "If the shoe fits, grandma\u2026"
+    actor: 1
+  - text: Oh! Well, I never!
+    actor: 0
+  - text: "Yeah, you\u2019ll never get away with it, you old bat!"
+    actor: 1
+  - text: Do you kiss your mother with that mouth?
+    actor: 0
+  dialogueOnInnocent:
+  - text: Innocent!
+    actor: 2
+  - text: No way! I demand another trial!
+    actor: 1
+  - text: I have a RIGHT to my car! And justice!
+    actor: 1
+  - text: "Thank you dearie\u2026"
+    actor: 0
+  - text: Now can I please have my groceries back?
+    actor: 0
+  - text: Did you hear that judge? She just confessed!
+    actor: 1
+  - text: "He he, double jeopardy, dearie\u2026"
+    actor: 0
+  dialogueOnGuilty:
+  - text: GUILTY!
+    actor: 2
+  - text: "I\u2019m so sorry dear. It was an emergency,"
+    actor: 0
+  - text: "and I didn\u2019t think you\u2019d mind."
+    actor: 0
+  - text: "You didn\u2019t even ask for permission!"
+    actor: 1
+  - text: Off to prison with you! I hope you rot!
+    actor: 1
+  - text: Well, I never! Such disrespect for your elders!
+    actor: 0
+  - text: Some animal ought to give you a good whooping
+    actor: 0
+  - text: for having such a foul mouth!
+    actor: 0
+  showDocket: 1
+  docket: "Balsa County PD Police Report Summary:\n\n*Victim\u2019s red car was in
+    the parking lot of Anderson\u2019s Grocery.\r\n\n*Car was loaded with bags of
+    green vegetables, several cans of prunes, and 2 bottles of prune juice.\r\n\n*Reading
+    glasses found at the scene match the description of the suspect\u2019s spectacles.\r\n"

@@ -33,11 +33,15 @@ MonoBehaviour:
   - text: Well, it's not a lie. Dogs DO drool.
     actor: 0
   dialogueOnInnocent:
+  - text: Innocent!
+    actor: 2
   - text: Haha! Fight the Power, baby!
     actor: 0
   - text: "One of these days, Ms. Kat, we\u2019ll book you for good!"
     actor: 1
   dialogueOnGuilty:
+  - text: GUILTY!
+    actor: 2
   - text: "No way! How can it be a crime if I\u2019m just stating the truth?"
     actor: 0
   - text: "It\u2019s not the truth. It\u2019s just an opinion,"

@@ -33,16 +33,24 @@ MonoBehaviour:
   - text: You ran into MY brand new car!
     actor: 1
   dialogueOnInnocent:
+  - text: Innocent!
+    actor: 2
   - text: What?! That's impossible! He can't be innocent!
     actor: 1
   - text: Thank you, Your Honor!
     actor: 0
   dialogueOnGuilty:
+  - text: GUILTY!
+    actor: 2
   - text: But I.... I'm just a turtle.
     actor: 0
   - text: Yeah, you're a turtle who scratched my new car!
     actor: 1
   showDocket: 1
-  docket: "Police Report from Balsa County PD \u2013 Summary:\n*Paint on suspect's
-    shell is not a match for Ms. Lizard's car.\n*Suspect is a key witness in another
-    ongoing case."
+  docket: 'Balsa County Police Report Summary:
+
+    *Paint on suspect''s shell is
+    not a match for Ms. Lizard''s car.
+
+    *Suspect is a key witness in another
+    ongoing case.'

@@ -15,15 +15,33 @@ MonoBehaviour:
   caseName: Tutorial 1
   caseNumber: 1
   defendantPrefab: {fileID: 0}
-  plaintiffPrefab: {fileID: 2796485231300183252, guid: e225f2f490cfc094fba6f2ee1891aa9f,
+  plaintiffPrefab: {fileID: 2796485231300183252, guid: 262a5c11f3101d4468340a65e504aa81,
     type: 3}
   verdict: 2
   dialogues:
-  - text: Hey, bub. I heard ya wanted a tutorial.
+  - text: "Croody! What have you been doing \u2013 sleeping on the bench?"
     actor: 1
-  - text: Well, I'm the tutorial guy. Cya, I decided no tutorials for you bub.
+  - text: Your case load is piling up,
     actor: 1
-  - text: Smack either Guilty or Innocent to continue.
+  - text: and you're only getting more cases!
+    actor: 1
+  - text: To even have a chance to hang onto your gavel,
+    actor: 1
+  - text: "you\u2019re going to have to speed run through these cases"
+    actor: 1
+  - text: and do a damn good job of it.
+    actor: 1
+  - text: "We\u2019ve done the math, and that gives you only 10 seconds"
+    actor: 1
+  - text: to review each case and decide if the defendant is innocent or guilty.
+    actor: 1
+  - text: Now, to make sure you understand me,
+    actor: 1
+  - text: you need to bang your gavel
+    actor: 1
+  - text: on either the 'guilty' or 'innocent' button.
+    actor: 1
+  - text: Whenever you're ready, Judge Croody.
     actor: 1
   dialogueOnInnocent:
   - text: Innocent!

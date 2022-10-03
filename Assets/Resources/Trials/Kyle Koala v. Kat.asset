@@ -29,6 +29,8 @@ MonoBehaviour:
   - text: And I happened to like singing. Is that a crime now?
     actor: 0
   dialogueOnInnocent:
+  - text: Innocent!
+    actor: 2
   - text: Whatever. Stay away from me, you perve!
     actor: 1
   - text: "Serves you all right for sticking your nose in a koala\u2019s business!"
@@ -36,18 +38,20 @@ MonoBehaviour:
   - text: Now let me out of here, asap!
     actor: 0
   dialogueOnGuilty:
+  - text: GUILTY!
+    actor: 2
   - text: "So, it\u2019s actually a crime to like music now? Sheesh\u2026"
     actor: 0
   - text: No, but it IS a crime to stalk a woman!
     actor: 1
   showDocket: 1
-  docket: 'Police Report from Balsa County PD - Summary:
+  docket: 'Balsa County Police Report Summary:
 
-    *Witness saw the suspect
-    walking behind Ms. Kat
+    *Witness saw the suspect walking
+    behind Ms. Kat
 
-    *He frequently ducked behind trash cans and into
-    alleys whenever she turned to look in his direction.
+    *He frequently ducked behind trash cans and into alleys whenever
+    she turned to look in his direction.
 
-    *He was also singing
-    about following her wherever she may go.'
+    *He was also singing about following
+    her wherever she may go.'

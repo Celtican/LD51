@@ -1699,7 +1699,7 @@ MonoBehaviour:
   actorContainer: {fileID: 1548369673}
   defendantPosition: {x: 4.4, y: -0.27, z: 0}
   plaintiffPosition: {x: -4.4, y: -0.27, z: 0}
-  debugTrial: {fileID: 0}
+  debugTrial: {fileID: 11400000, guid: 710e1f43146f8744b9adb06b9c562f0c, type: 2}
   onNewTrial:
     m_PersistentCalls:
       m_Calls:

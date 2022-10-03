@@ -33,6 +33,8 @@ MonoBehaviour:
   - text: Don't say I didn't warn you'se.
     actor: 0
   dialogueOnInnocent:
+  - text: Innocent!
+    actor: 2
   - text: Wh--what? How did you get those photos?
     actor: 1
   - text: I think we've all reached an understanding here.
@@ -42,6 +44,8 @@ MonoBehaviour:
   - text: So if you'se would excuse me...
     actor: 0
   dialogueOnGuilty:
+  - text: GUILTY!
+    actor: 2
   - text: 'Your Honor, I demand you arrest that toucan as soon as possible! '
     actor: 1
   - text: "Also, can you please, um, discretely dispose of those photos\u2026.?"

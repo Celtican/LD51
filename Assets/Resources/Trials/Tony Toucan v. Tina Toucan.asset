@@ -31,6 +31,8 @@ MonoBehaviour:
   - text: That may be, but you still owe me rent!
     actor: 0
   dialogueOnInnocent:
+  - text: Innocent!
+    actor: 2
   - text: Does family mean NOTHING to either of you?
     actor: 1
   - text: If you're family, you honor our agreement.
@@ -38,6 +40,8 @@ MonoBehaviour:
   - text: If you don't honor it, you ain't family no more.
     actor: 0
   dialogueOnGuilty:
+  - text: GUILTY!
+    actor: 2
   - text: What am I supposed to do with this?
     actor: 0
   - text: I'm still 300 jungle coins in the hole for this!

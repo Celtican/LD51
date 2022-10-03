@@ -33,11 +33,15 @@ MonoBehaviour:
   - text: "I'm telling you, you\u2019ve got the wrong guy!"
     actor: 0
   dialogueOnInnocent:
+  - text: Innocent!
+    actor: 2
   - text: What? Are you blind, Judge?
     actor: 1
   - text: "I told you \u2013 I\u2019m a vegetarian!"
     actor: 0
   dialogueOnGuilty:
+  - text: GUILTY!
+    actor: 2
   - text: Ha! Off to prison with you, thief!
     actor: 1
   - text: "What? No, but I can\u2019t go to prison!"

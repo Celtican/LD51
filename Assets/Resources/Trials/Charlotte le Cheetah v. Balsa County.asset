@@ -28,11 +28,15 @@ MonoBehaviour:
   - text: and only sent this note to you, Your Honor.
     actor: 1
   dialogueOnInnocent:
+  - text: Innocent!
+    actor: 2
   - text: "Don\u2019t give in to her seduction, Your Honor!"
     actor: 1
   - text: "She\u2019ll just keep breaking the law!"
     actor: 1
   dialogueOnGuilty:
+  - text: GUILTY!
+    actor: 2
   - text: Very wise, Your Honor.
     actor: 1
   - text: This seductress needs to learn her lesson.
