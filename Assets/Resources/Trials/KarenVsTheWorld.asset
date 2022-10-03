@@ -50,9 +50,9 @@ MonoBehaviour:
     actor: 0
   showDocket: 1
   docketSprite: {fileID: 0}
-  docket: "Lizzie Lizard accuses Tony Toucan of thievery.\n\nSummary of Witness Statement:\n\n*Witness
-    saw Ms. Lizard talking to the suspect.\n\n*Suspect grabbed Ms. Lizard's purse
-    and wallet.\n\n*Ms. Lizard demanded a store clerk to get his manager and arrest
-    the suspect.\r\n\n*Other witnesses at the scene made themselves scarce when Ms.
-    Lizard started screeching.\r\n\r\nWitness states: \u201CI saw him take her wallet.
-    This Karen definitely had a reason to complain for once.\u201D"
+  docket: "Lizzie Lizard accuses Tony Toucan of thievery.\n\nSummary of Witness Statement:\n*Witness
+    saw Ms. Lizard talking to the suspect.\n*Suspect grabbed Ms. Lizard's purse and
+    wallet.\n*Ms. Lizard demanded a store clerk to get his manager and arrest the
+    suspect.\r\n*Other witnesses at the scene made themselves scarce when Ms. Lizard
+    started screeching.\r\nWitness states: \u201CI saw him take her wallet. This
+    Karen definitely had a reason to complain for once.\u201D"
