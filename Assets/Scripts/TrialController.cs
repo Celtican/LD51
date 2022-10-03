@@ -31,6 +31,7 @@ public class TrialController : MonoBehaviour
 	public UnityEvent onWinBad;
 	public Sprite judgeInnocentBubble;
 	public Sprite judgeGuiltyBubble;
+	public AudioSource gaspSound;
 
 	private List<Trial> trials;
 	private Trial trial;
@@ -46,6 +47,7 @@ public class TrialController : MonoBehaviour
 	private bool shownEndTrial;
 
 	private void Start() {
+		// if (true) return;
 		List<Trial> allTrials = new List<Trial>(Resources.LoadAll<Trial>("Trials"));
 		List<Trial> specificTrials = new List<Trial>();
 		for (int i = allTrials.Count-1; i >= 0; i--) {
@@ -62,8 +64,13 @@ public class TrialController : MonoBehaviour
 			}
 		}
 		trials = new List<Trial>();
+		int sentinel = 100;
+		int s = 0;
 		while (allTrials.Count > 0 || specificTrials.Count > 0) {
+			s++;
+			if (s == sentinel) break;
 			for (int i = specificTrials.Count - 1; i >= 0; i--) {
+				print(specificTrials[i]);
 				if (specificTrials[i].caseNumber == trials.Count+1) {
 					trials.Add(specificTrials[i]);
 					specificTrials.RemoveAt(i);
@@ -75,6 +82,8 @@ public class TrialController : MonoBehaviour
 				allTrials.RemoveAt(r);
 			}
 		}
+		print("alltrials: " + allTrials.Count);
+		print("specificrials: " + specificTrials.Count);
 
 		if (debugTrial != null) StartTrial(debugTrial);
 		else StartNextTrial();
@@ -251,6 +260,7 @@ public class TrialController : MonoBehaviour
 			bonusTimer.LoseTime(3);
 			numIncorrect++;
 			print("Incorrect");
+			gaspSound.Play();
 		}
 		Choose();
 		StartDialogues(trial.dialogueOnInnocent, true);
@@ -268,6 +278,7 @@ public class TrialController : MonoBehaviour
 			bonusTimer.LoseTime(3);
 			numIncorrect++;
 			print("Incorrect");
+			gaspSound.Play();
 		}
 		Choose();
 		StartDialogues(trial.dialogueOnGuilty, true);

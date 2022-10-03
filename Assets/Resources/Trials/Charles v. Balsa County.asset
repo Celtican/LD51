@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Charles v. Balsa County
   m_EditorClassIdentifier: 
   caseName: Charles v. Balsa County
-  caseNumber: 2
+  caseNumber: 0
   defendantPrefab: {fileID: 2796485231300183252, guid: 24f9233681827d54c9800df4fdc802e1,
     type: 3}
   plaintiffPrefab: {fileID: 2796485231300183252, guid: 262a5c11f3101d4468340a65e504aa81,
